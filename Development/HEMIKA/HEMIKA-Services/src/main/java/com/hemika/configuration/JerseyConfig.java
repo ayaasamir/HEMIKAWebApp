@@ -12,6 +12,7 @@ public class JerseyConfig extends ResourceConfig {
     public JerseyConfig(){
         register(CORSFilter.class);
         packages("com.hemika.controller");
+        packages("com.hemika.controller.filter");
     }
 
 }

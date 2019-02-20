@@ -11,11 +11,16 @@ import { HomeComponent } from './modules/home/home.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { PatientDetailsComponent } from './modules/patient-profile/components/patient-details/patient-details.component';
+import { PatientProfileComponent } from './modules/patient-profile/patient-profile.component';
+import { PatientHistoryComponent } from './modules/patient-profile/components/patient-history/patient-history.component';
+import { LoginComponent } from './modules/security/components/login/login.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    FullLayoutComponent, SimpleLayoutComponent, AppHeaderComponent, AppFooterComponent, HomeComponent
+    FullLayoutComponent, SimpleLayoutComponent, AppHeaderComponent, AppFooterComponent, HomeComponent, PatientDetailsComponent,
+    PatientProfileComponent, PatientHistoryComponent, LoginComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
