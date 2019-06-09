@@ -12,8 +12,11 @@ export class SecurityService{
 
   //TODO: Aya - Use Base URL same as /course/shared/course.service
   Login(data:LoginDTO){
-    console.log(data);
-
+    // console.log(data);
     return this.http.post<AuthUser>(this.BASE_URL + "/login", data);
+  }
+
+  test(){
+    return this.http.get(this.BASE_URL + "/test");
   }
 }

@@ -10,11 +10,13 @@ import { AppFooterComponent } from './layout/components/full-layout/components/a
 import { HomeComponent } from './modules/home/home.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { PatientDetailsComponent } from './modules/patient-profile/components/patient-details/patient-details.component';
 import { PatientProfileComponent } from './modules/patient-profile/patient-profile.component';
 import { PatientHistoryComponent } from './modules/patient-profile/components/patient-history/patient-history.component';
 import { LoginComponent } from './modules/security/components/login/login.component';
+import {AuthInterceptor} from "./infrastructure/interceptor/auth.interceptor";
+import {LocalStorageService} from "./infrastructure/services/local-storage.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LoginComponent } from './modules/security/components/login/login.compon
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LocalStorageService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }
