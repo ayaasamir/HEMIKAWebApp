@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {LoginDTO} from "../../shared/data/login-dto.data";
 import {AuthUser} from "../../shared/data/auth-vto.data";
 import {SecurityService} from "../../shared/security.service";
-import {LocalStorageService} from "../../../../infrastructure/services/local-storage.service";
 
 @Component({
   selector: 'app-login',
@@ -20,8 +19,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private userService: SecurityService,
-              private localStorageService: LocalStorageService) { }
+              private userService: SecurityService) { }
 
   ngOnInit() {
   }
@@ -35,9 +33,9 @@ export class LoginComponent implements OnInit {
       this.userService.Login(data).subscribe(
         res=>{
           this.authVto = res;
-          // console.log("Success");
-          // console.log(this.authVto);
-          this.localStorageService.setAuthUser(this.authVto);
+          console.log("Success");
+          console.log(this.authVto);
+          localStorage.setItem('token', this.authVto.token);
         },
         err => {console.log(err);}
       );

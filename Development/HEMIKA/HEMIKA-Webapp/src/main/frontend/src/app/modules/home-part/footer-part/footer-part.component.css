@@ -1,0 +1,26 @@
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.ressum {background-color: #4CAF50;} /* Green */
+.ressum:hover {background-color: #46a049;}
+
+.end {background-color: #2196F3;} /* Blue */
+.end:hover {background: #0b7dda;}
+
+.set {background-color: #ff9800;} /* Orange */
+.set:hover {background: #e68a00;}
+
+.submit {background-color: #f44336;} /* Red */
+.submit:hover {background: #da190b;}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #6D7B8D;
+}
