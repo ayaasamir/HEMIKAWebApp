@@ -9,15 +9,19 @@ import {CreateUserComponent} from "./modules/creating-users/components/create-us
 import {DoctorDetailsComponent} from "./modules/new-doctor-details/components/doctor-details/doctor-details.component";
 import {CreateRobotComponent} from "./modules/creating-users/components/create-robot/create-robot.component";
 import {HomePageComponent} from "./modules/home/components/home-page/home-page.component";
+import {HomePartComponent} from "./modules/home-part/home-part.component";
+import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: '', component: FullLayoutComponent, children:[
       {path:'home', component:HomePageComponent},
+      {path:'home/part', component:HomePartComponent},
       {path: 'user/new', component: CreateUserComponent},
       {path: 'patient/profile', component: PatientProfileComponent},
       {path: 'user/doctor', component: DoctorDetailsComponent},
       {path: 'robot/new', component: CreateRobotComponent},
+      {path: 'robot/done', component: CreateRobotDoneComponent},
       {path: 'login', component: LoginComponent}
 
     ]},

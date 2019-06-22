@@ -29,17 +29,20 @@ import {FooterPartComponent} from "./modules/home-part/footer-part/footer-part.c
 import {HeaderPartComponent} from "./modules/home-part/header-part/header-part.component";
 import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {HomeComponent} from "./modules/home/home.component";
+import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
+import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header/doc-header.component";
+import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
-    LayoutComponent,
+    LayoutComponent,DocHeaderComponent,DocSideBarComponent,
     FullLayoutComponent, SimpleLayoutComponent, AppHeaderComponent,
     AppFooterComponent, PatientDetailsComponent,AppComponent,HomeComponent,
     PatientProfileComponent, PatientHistoryComponent, LoginComponent,
     AppHeaderComponent, AppFooterComponent,HomePageComponent,
     ContainerPartComponent,FooterPartComponent,HeaderPartComponent,HomePartComponent,
-    CreateUserComponent, CreateRobotComponent, DoctorDetailsComponent
+    CreateUserComponent, CreateRobotComponent,CreateRobotDoneComponent, DoctorDetailsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,

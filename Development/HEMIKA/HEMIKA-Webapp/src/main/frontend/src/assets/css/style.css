@@ -6,7 +6,9 @@ body {
   line-height: 1.8;
   color: #868e96;
 }
-
+/*.slider-item {*/
+  /*background-image: url("../img/slider-2.jpg");*/
+/*}*/
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;

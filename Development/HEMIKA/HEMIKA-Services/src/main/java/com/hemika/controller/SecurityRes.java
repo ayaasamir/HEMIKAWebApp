@@ -1,15 +1,13 @@
 package com.hemika.controller;
 
-import com.hemika.controller.filter.AuthenticationFilter;
-import com.hemika.model.annotation.Authenticate;
 import com.hemika.model.security.LoginUserDTO;
-import com.hemika.model.user.User;
 import com.hemika.service.SecuritySer;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.ws.rs.*;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -29,14 +27,6 @@ public class SecurityRes {
     public Response login(LoginUserDTO data) throws Exception {
         Response response = this.securitySer.Login(data);
         return response;
-    }
-
-    @Path("test")
-    @GET
-    @Authenticate
-    public void sayHello(@Context ContainerRequestContext requestContext){
-        User currentUser = (User)requestContext.getProperty(AuthenticationFilter.AUTH_USER);
-        System.out.println("Testing Authorization Header");
     }
 
 }
