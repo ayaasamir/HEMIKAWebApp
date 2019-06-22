@@ -1,0 +1,389 @@
+
+<!--&lt;!&ndash;<style>&ndash;&gt;-->
+<!--  &lt;!&ndash;h2{text-align:center;}&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="content">&ndash;&gt;-->
+<!--  &lt;!&ndash;<div class="container-fluid">&ndash;&gt;-->
+<!--    &lt;!&ndash;<h2 class="page-title ">VISITOR FORM</h2>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;<div class="mt-3 row">&ndash;&gt;-->
+<!--      &lt;!&ndash;<div class="offset-3 col-md-6">&ndash;&gt;-->
+<!--        &lt;!&ndash;<div class="card">&ndash;&gt;-->
+
+<!--          &lt;!&ndash;<div class="card-header">&ndash;&gt;-->
+<!--            &lt;!&ndash;<div class="card-title">New Visitor For Patient : ...............</div>&ndash;&gt;-->
+<!--          &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--          &lt;!&ndash;<div class="card-body">&ndash;&gt;-->
+
+<!--              &lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--                &lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
+<!--                  &lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<label for="user_name">Name</label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<input type="text" class="form-control input-square" id="user_name" formControlName="name" placeholder="visitor name">&ndash;&gt;-->
+<!--                  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                &lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
+<!--                  &lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<label for="RelationSelect">Relation</label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<select class="form-control input-square"  id="RelationSelect">&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>the parent</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>the mother</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>the uncle</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>the Brother</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>the sister</option>&ndash;&gt;-->
+<!--                    &lt;!&ndash;</select>&ndash;&gt;-->
+<!--                  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                &lt;!&ndash;</div>&ndash;&gt;-->
+<!--              &lt;!&ndash;</div>&ndash;&gt;-->
+<!--              &lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--                &lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
+<!--                  &lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<label for="id">ID</label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<input type="text" class="form-control input-square" id="id" placeholder="visitor national ID">&ndash;&gt;-->
+<!--                  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                &lt;!&ndash;</div>&ndash;&gt;-->
+<!--              &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--          &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--          &lt;!&ndash;&lt;!&ndash;<div class="card-body">&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;<form [formGroup]="formData">&ndash;&gt;&ndash;&gt;-->
+<!--              &lt;!&ndash;&lt;!&ndash;<div class="row">&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;<div class="col-md-6">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;<div class="form-group">&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<label for="user_name">Name</label>&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<input type="text" class="form-control input-square" id="user_name" formControlName="name" placeholder="visitor name">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;<div class="col-md-6">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;<div class="form-group">&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<label for="RelationSelect">Relation</label>&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<select class="form-control input-square" formControlName="relation" id="RelationSelect">&ndash;&gt;&ndash;&gt;-->
+<!--                      &lt;!&ndash;&lt;!&ndash;<option>the parent</option>&ndash;&gt;&ndash;&gt;-->
+<!--                      &lt;!&ndash;&lt;!&ndash;<option>the mother</option>&ndash;&gt;&ndash;&gt;-->
+<!--                      &lt;!&ndash;&lt;!&ndash;<option>the uncle</option>&ndash;&gt;&ndash;&gt;-->
+<!--                      &lt;!&ndash;&lt;!&ndash;<option>the Brother</option>&ndash;&gt;&ndash;&gt;-->
+<!--                      &lt;!&ndash;&lt;!&ndash;<option>the sister</option>&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;</select>&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--              &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--              &lt;!&ndash;&lt;!&ndash;<div class="row">&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;<div class="col-md-6">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;<div class="form-group">&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<label for="id">ID</label>&ndash;&gt;&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;<input type="text" class="form-control input-square" id="id" formControlName="id" placeholder="visitor national ID">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--              &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;</form>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+
+<!--          &lt;!&ndash;<div class="card-action">&ndash;&gt;-->
+<!--            &lt;!&ndash;<button class="btn btn-success pull-right ml-2">Clear</button>&ndash;&gt;-->
+<!--            &lt;!&ndash;<button class="btn btn-danger pull-right" >Add</button>&ndash;&gt;-->
+<!--          &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--          &lt;!&ndash;&lt;!&ndash;<div class="card-action">&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;<button class="btn btn-success pull-right ml-2" (click)="clear()">Clear</button>&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;<button class="btn btn-danger pull-right" (click)="add()">Add</button>&ndash;&gt;&ndash;&gt;-->
+<!--          &lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
+
+<!--        &lt;!&ndash;</div>&ndash;&gt;-->
+<!--      &lt;!&ndash;</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--      &lt;!&ndash;<div class="offset-3 col-md-6">&ndash;&gt;-->
+<!--        &lt;!&ndash;<div class="card">&ndash;&gt;-->
+<!--          &lt;!&ndash;<div class="card-body">&ndash;&gt;-->
+<!--            &lt;!&ndash;<div class="table-responsive">&ndash;&gt;-->
+<!--              &lt;!&ndash;<table class="table table-bordered">&ndash;&gt;-->
+<!--                &lt;!&ndash;<thead>&ndash;&gt;-->
+<!--                &lt;!&ndash;<tr>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th>#</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th>Name</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th>Relation</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th>ID</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th>Remove</th>&ndash;&gt;-->
+<!--                &lt;!&ndash;</tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;</thead>&ndash;&gt;-->
+<!--                &lt;!&ndash;<tbody>&ndash;&gt;-->
+<!--                &lt;!&ndash;<tr>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th scope="row">1</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td><i class="la la-times"></i></td>&ndash;&gt;-->
+<!--                &lt;!&ndash;</tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;<tr>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th scope="row">2</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td><i class="la la-times"></i></td>&ndash;&gt;-->
+<!--                &lt;!&ndash;</tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;<tr>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<th scope="row">3</th>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td>..........</td>&ndash;&gt;-->
+<!--                  &lt;!&ndash;<td><i class="la la-times"></i></td>&ndash;&gt;-->
+<!--                &lt;!&ndash;</tr>&ndash;&gt;-->
+<!--                &lt;!&ndash;</tbody>&ndash;&gt;-->
+<!--              &lt;!&ndash;</table>&ndash;&gt;-->
+<!--            &lt;!&ndash;</div>&ndash;&gt;-->
+<!--          &lt;!&ndash;</div>&ndash;&gt;-->
+<!--        &lt;!&ndash;</div>&ndash;&gt;-->
+<!--      &lt;!&ndash;</div>&ndash;&gt;-->
+<!--    &lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--////////////////////////////////////////////////////////////////////////////////-->
+<!--<style>-->
+<!--  h2{text-align:center;}-->
+<!--</style>-->
+<!--<div class="content">-->
+<!--  <div class="container-fluid">-->
+<!--    <h2 class="page-title ">CREATING FORM</h2>-->
+
+<!--    <div class="mt-3 row">-->
+<!--      <div class="offset-3 col-md-6">-->
+<!--        <div class="card mb-5">-->
+
+<!--          <div class="card-header">-->
+<!--            <div class="card-title">CREATE USER</div>-->
+<!--          </div>-->
+
+<!--          <div class="card-body">-->
+<!--            <form [formGroup]="formData">-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="first_name">First Name</label>-->
+<!--                    <input type="text" class="form-control input-square" id="first_name"-->
+<!--                            formControlName="firstName" placeholder="First Name">-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="form-group">-->
+<!--                      <label for="last_name">Last Name</label>-->
+<!--                      <input type="text" class="form-control input-square" id="last_name"-->
+<!--                             formControlName="lastName" placeholder="Last Name">-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                    <div class="form-group">-->
+<!--                      <label for="user_name">User Name</label>-->
+<!--                      <input type="text" class="form-control input-square" id="user_name"-->
+<!--                             formControlName="userName" placeholder="User Name">-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label class="font-weight-bold">Type</label>-->
+<!--                    <select class="form-control " formControlName="type">-->
+<!--                      <option class="mt-auto"-->
+<!--                              *ngFor="let type of userType"-->
+<!--                              [ngValue]="type.id">{{type.labelEN}}-->
+<!--                      </option>-->
+<!--                    </select>-->
+<!--                  </div>-->
+<!--                      &lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--                        &lt;!&ndash;<label for="RelationSelect">Type</label>&ndash;&gt;-->
+<!--                        &lt;!&ndash;<select class="form-control input-square" id="RelationSelect"&ndash;&gt;-->
+<!--                                &lt;!&ndash;formControlName="type">&ndash;&gt;-->
+<!--                          &lt;!&ndash;<option>Admin(IT)</option>&ndash;&gt;-->
+<!--                          &lt;!&ndash;<option>Doctor</option>&ndash;&gt;-->
+<!--                          &lt;!&ndash;<option>Visitor</option>&ndash;&gt;-->
+<!--                          &lt;!&ndash;<option>Robot</option>&ndash;&gt;-->
+<!--                        &lt;!&ndash;</select>&ndash;&gt;-->
+<!--                      &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="form-group">-->
+<!--                  <label for="password">Password</label>-->
+<!--                  <input type="password" class="form-control input-square" id="password"-->
+<!--                         formControlName="password" placeholder="Password">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="form-group">-->
+<!--                  <label for="confirm_password">Confirm Password</label>-->
+<!--                  <input type="password" class="form-control input-square" id="confirm_password"-->
+<!--                         formControlName="confirmPassword" placeholder="Confirm Password">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            </form>-->
+<!--          </div>-->
+
+<!--          <div class="card-action mb-3">-->
+<!--            <button class="btn btn-success pull-right ml-3 " (click)="submit()"-->
+<!--                    [routerLink]="['/user/doctor']">-->
+<!--              Submit-->
+<!--            </button>-->
+<!--            &lt;!&ndash;<button class="btn btn-success pull-right ml-3 " (click)="submit()">Submit</button>&ndash;&gt;-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--//////////////////////////////////////////////////////////////////////////////////////-->
+<style>
+  h2{text-align:center;}
+</style>
+<div class="content">
+  <div class="container-fluid">
+    <h2 class="page-title ">CREATING FORM</h2>
+
+    <div class="mt-3 row">
+      <div class="offset-3 col-md-6">
+        <div class="card mb-5">
+
+          <div class="card-header">
+            <div class="card-title">CREATE USER</div>
+          </div>
+
+          <div class="card-body">
+            <form [formGroup]="formData">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="national_id">National_ID</label>
+                    <input type="text" class="form-control input-square" id="national_id"
+                           formControlName="nationalID" placeholder="Enter national_id ">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="font-weight-bold">Type</label>
+                    <select class="form-control " formControlName="type">
+                      <option class="mt-auto"
+                              *ngFor="let type of userType"
+                              [ngValue]="type.id">{{type.labelEN}}
+                      </option>
+                    </select>
+                  </div>
+                  <!--<div class="form-group">-->
+                  <!--<label for="RelationSelect">Type</label>-->
+                  <!--<select class="form-control input-square" id="RelationSelect"-->
+                  <!--formControlName="type">-->
+                  <!--<option>Admin(IT)</option>-->
+                  <!--<option>Doctor</option>-->
+                  <!--<option>Visitor</option>-->
+                  <!--<option>Robot</option>-->
+                  <!--</select>-->
+                  <!--</div>-->
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control input-square" id="first_name"
+                            formControlName="firstName" placeholder="Enter first name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input type="text" class="form-control input-square" id="last_name"
+                             formControlName="lastName" placeholder="Enter last name">
+                    </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="user_address">User Address </label>
+                    <input type="text" class="form-control input-square" id="user_address"
+                           formControlName="address" placeholder="Enter user_address">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="mobile_number">Mobile Number</label>
+                    <input type="text" class="form-control input-square" id="mobile_number"
+                           formControlName="mobileNumber" placeholder="Enter mobile_number">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="user_name">User Name</label>
+                      <input type="text" class="form-control input-square" id="user_name"
+                             formControlName="userName" placeholder="Enter user name">
+                    </div>
+                  </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="birth_date">Birth Date</label>
+                    <input type="date" name="bday" class="form-control"
+                           formControlName="birthDate" id="birth_date">
+                  </div>
+                </div>
+
+              </div>
+<!--              </div>-->
+
+              <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control input-square" id="password"
+                         formControlName="password" placeholder="Password">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="confirm_password">Confirm Password</label>
+                  <input type="password" class="form-control input-square" id="confirm_password"
+                         formControlName="confirmPassword" placeholder="Confirm Password">
+                </div>
+              </div>
+            </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control input-square" id="email"
+                           formControlName="email" placeholder="Enter email">
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="card-action mb-3">
+            <button class="btn btn-success pull-right ml-3 " (click)="submit()"
+                    [routerLink]="['/user/doctor']">
+              Submit
+            </button>
+            <!--<button class="btn btn-success pull-right ml-3 " (click)="submit()">Submit</button>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

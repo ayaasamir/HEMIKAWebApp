@@ -1,0 +1,71 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+<style>
+  h1{text-align:center;}
+</style>
+<div class="content">
+  <div class="container-fluid">
+    <h1 class="page-title ">CREATING FORM</h1>
+
+    <div class="mt-3 row">
+      <div class="offset-3 col-md-6">
+        <div class="card mb-5">
+
+          <div class="card-header">
+            <div class="card-title"><h2>CREATE ROBOT</h2></div>
+          </div>
+
+          <div class="card-body">
+            <form [formGroup]="formData">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="robot_name"><h2>Robot Name</h2></label>
+                    <input type="text" class="form-control input-square" id="robot_name"
+                           formControlName="robotName" placeholder="Enter Robot Name">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="location_X"><h2>Location_X</h2></label>
+                    <input type="location_X" class="form-control input-square" id="location_X"
+                           formControlName="location_X" placeholder="Enter Location X">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="location_Y"><h2>Location_Y</h2></label>
+                    <input type="location_Y" class="form-control input-square" id="location_Y"
+                           formControlName="location_Y" placeholder="Enter Location Y">
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="card-action mb-3">
+            <button class="btn btn-success pull-right ml-3 " (click)="submit()"
+                    [routerLink]="['/robot/done']">
+              Submit
+            </button>
+            <!--<button class="btn btn-success pull-right ml-3 " (click)="submit()">Submit</button>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

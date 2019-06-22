@@ -11,6 +11,7 @@ import {CreateRobotComponent} from "./modules/creating-users/components/create-r
 import {HomePageComponent} from "./modules/home/components/home-page/home-page.component";
 import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
+import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -22,7 +23,8 @@ const routes: Routes = [
       {path: 'user/doctor', component: DoctorDetailsComponent},
       {path: 'robot/new', component: CreateRobotComponent},
       {path: 'robot/done', component: CreateRobotDoneComponent},
-      {path: 'login', component: LoginComponent}
+      {path: 'login', component: LoginComponent},
+      {path: 'visitor', component: VisitorComponent}
 
     ]},
   {path:'', component: SimpleLayoutComponent, children:[
