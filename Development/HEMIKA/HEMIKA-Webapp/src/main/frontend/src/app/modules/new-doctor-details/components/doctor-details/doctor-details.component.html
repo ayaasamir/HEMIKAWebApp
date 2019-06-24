@@ -1,20 +1,119 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>Title</title>-->
-<!--</head>-->
-<!--<body>-->
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--    &lt;!&ndash;<meta charset="UTF-8">&ndash;&gt;-->
+<!--    &lt;!&ndash;<title>Title</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
 
-<!--</body>-->
-<!--</html>-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+<!--<style>-->
+<!--  h2{text-align:center;}-->
+<!--</style>-->
+<!--<div class="content">-->
+<!--  <div class="container-fluid">-->
+<!--    &lt;!&ndash;<h2 class="page-title ">USERS FORM</h2>&ndash;&gt;-->
+
+<!--    <div class="mt-3 mb-3 row">-->
+<!--      <div class="offset-3 col-md-6">-->
+<!--        <div class="card">-->
+
+<!--          <div class="card-header">-->
+<!--            <div class="card-title">DOCTOR DETAILS</div>-->
+<!--          </div>-->
+
+<!--          <div class="card-body">-->
+<!--            <form [formGroup]="formData">-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="department">Department</label>-->
+<!--                    <input type="text" class="form-control input-square" id="department"-->
+<!--                           formControlName="department">-->
+<!--                    &lt;!&ndash;placeholder="First Name">&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="mobile">Mobile</label>-->
+<!--                    <input type="text" class="form-control input-square" id="mobile"-->
+<!--                           formControlName="mobile" >-->
+<!--                    &lt;!&ndash;placeholder="Last Name">&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="specialization">Specialization</label>-->
+<!--                    <select class="form-control input-square" id="specialization"-->
+<!--                            formControlName="specialization">-->
+<!--                      &lt;!&ndash;<option>Dermatologists </option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>Emergency Medicine Specialists</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>Gastroenterologists </option>&ndash;&gt;-->
+<!--                      <option>Allergist (immunologist)</option>-->
+<!--                      &lt;!&ndash;<option>Anesthesiologist. </option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>Addiction psychiatrist</option>&ndash;&gt;-->
+<!--                      <option>Cardiologist </option>-->
+<!--                      &lt;!&ndash;<option>Colon and rectal surgeon</option>&ndash;&gt;-->
+<!--                      <option>Anesthesiologist</option>-->
+<!--                      &lt;!&ndash;<option>Cardiovascular surgeon</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>Adolescent medicine specialist</option>&ndash;&gt;-->
+<!--                      &lt;!&ndash;<option>Cardiac electrophysiologist</option>&ndash;&gt;-->
+<!--                    </select>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="grade_year">Graduation Year</label>-->
+<!--                    <input type="text" class="form-control input-square" id="grade_year"-->
+<!--                           formControlName="grade_year">-->
+<!--                    &lt;!&ndash;placeholder="User Name">&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label for="email">Email</label>-->
+<!--                    <input type="text" class="form-control input-square" id="email"-->
+<!--                           formControlName="email" >-->
+<!--                    &lt;!&ndash;placeholder="Password">&ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;<div class="col-md-6">&ndash;&gt;-->
+<!--                  &lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+<!--                    &lt;!&ndash;<label for="personal_pic">Personal Picture</label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;<input type="text" class="form-control input-square" id="personal_pic"&ndash;&gt;-->
+<!--                           &lt;!&ndash;formControlName="personal_pic">&ndash;&gt;-->
+<!--                    &lt;!&ndash;&lt;!&ndash;placeholder="Confirm Password">&ndash;&gt;&ndash;&gt;-->
+<!--                  &lt;!&ndash;</div>&ndash;&gt;-->
+<!--                &lt;!&ndash;</div>&ndash;&gt;-->
+<!--              </div>-->
+
+<!--            </form>-->
+<!--          </div>-->
+
+<!--          <div class="card-action">-->
+<!--            <button class="btn btn-success pull-right mb-2 ml-5 mr-5 " (click)="submit()">Submit</button>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--/////////////////////////////////////////////////////////////////////-->
+
 <style>
   h2{text-align:center;}
 </style>
 <div class="content">
   <div class="container-fluid">
-    <!--<h2 class="page-title ">USERS FORM</h2>-->
-
     <div class="mt-3 mb-3 row">
       <div class="offset-3 col-md-6">
         <div class="card">
@@ -27,46 +126,54 @@
             <form [formGroup]="formData">
 
               <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="department">Department</label>
-                    <input type="text" class="form-control input-square" id="department"
-                           formControlName="department">
-                    <!--placeholder="First Name">-->
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="mobile">Mobile</label>
-                    <input type="text" class="form-control input-square" id="mobile"
-                           formControlName="mobile" >
-                    <!--placeholder="Last Name">-->
-                  </div>
-                </div>
-              </div>
 
-              <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="specialization">Specialization</label>
-                    <select class="form-control input-square" id="specialization"
-                            formControlName="specialization">
-                      <!--<option>Dermatologists </option>-->
-                      <!--<option>Emergency Medicine Specialists</option>-->
-                      <!--<option>Gastroenterologists </option>-->
-                      <option>Allergist (immunologist)</option>
-                      <!--<option>Anesthesiologist. </option>-->
-                      <!--<option>Addiction psychiatrist</option>-->
-                      <option>Cardiologist </option>
-                      <!--<option>Colon and rectal surgeon</option>-->
-                      <option>Anesthesiologist</option>
-                      <!--<option>Cardiovascular surgeon</option>-->
-                      <!--<option>Adolescent medicine specialist</option>-->
-                      <!--<option>Cardiac electrophysiologist</option>-->
+                    <label class="font-weight-bold" >Department</label>
+                    <select class="form-control " formControlName="department">
+                      <option class="mt-auto"
+                              *ngFor="let departType of departName"
+                              [ngValue]="departType.id">{{departType.departName}}
+                      </option>
                     </select>
                   </div>
                 </div>
-                <div class="col-md-6">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="font-weight-bold" >Specialization</label>
+                      <select class="form-control " formControlName="specialization">
+                        <option class="mt-auto"
+                                *ngFor="let specialType of specialName"
+                                [ngValue]="specialType.id">{{specialType.specialName}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="experience">Experience</label>
+                    <input type="text" class="form-control input-square" id="experience"
+                           formControlName="experience" >
+                    <!--placeholder="Password">-->
+                  </div>
+                </div>
+<!--                <div class="col-md-6">-->
+<!--                  <div class="form-group">-->
+<!--                    <label class="font-weight-bold">Type</label>-->
+<!--                    <select class="form-control " formControlName="type">-->
+<!--                      <option class="mt-auto"-->
+<!--                              *ngFor="let type of userType"-->
+<!--                              [ngValue]="type.id">{{type.labelEN}}-->
+<!--                      </option>-->
+<!--                    </select>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div>
+              <div class="row">
+                <div class="col-md-12">
                   <div class="form-group">
                     <label for="grade_year">Graduation Year</label>
                     <input type="text" class="form-control input-square" id="grade_year"
@@ -76,30 +183,11 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control input-square" id="email"
-                           formControlName="email" >
-                    <!--placeholder="Password">-->
-                  </div>
-                </div>
-                <!--<div class="col-md-6">-->
-                  <!--<div class="form-group">-->
-                    <!--<label for="personal_pic">Personal Picture</label>-->
-                    <!--<input type="text" class="form-control input-square" id="personal_pic"-->
-                           <!--formControlName="personal_pic">-->
-                    <!--&lt;!&ndash;placeholder="Confirm Password">&ndash;&gt;-->
-                  <!--</div>-->
-                <!--</div>-->
-              </div>
-
             </form>
           </div>
 
           <div class="card-action">
-            <button class="btn btn-success pull-right mb-2 ml-5 mr-5 " (click)="submit()">Submit</button>
+            <button class="btn btn-success pull-right mb-2 ml-10 mr-5 " (click)="submit()">Submit</button>
           </div>
 
         </div>

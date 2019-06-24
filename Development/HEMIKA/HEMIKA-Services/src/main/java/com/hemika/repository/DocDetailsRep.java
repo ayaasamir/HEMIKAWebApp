@@ -12,11 +12,11 @@ public class DocDetailsRep {
     public DocDetailsRep(JdbcTemplate jdbcTemplate) { this.jdbcTemplate = jdbcTemplate; }
 
     public void insertNewDoctor(DoctorDtoData data) {
-        String sql = "insert into doctors (department,mobile,specialization," +
-                ",grade_year,email) values (?,?,?,?,?)";
-        this.jdbcTemplate.update(sql, data.getDepartment(), data.getMobile(),
-                data.getSpecialization(), data.getGrade_year(),
-                data.getEmail()
+        String sql = "insert into mydb.doctor_t (user_t_national_id,graduation_year,experience," +
+                ",department_t_id,specialization_t_id) values (?,?,?,?,?)";
+        this.jdbcTemplate.update(sql, data.getNationalID(), data.getGrade_year(),
+                data.getExperience(), data.getDepartment(),
+                data.getSpecialization()
         );
 
 

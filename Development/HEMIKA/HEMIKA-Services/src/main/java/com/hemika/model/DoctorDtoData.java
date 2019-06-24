@@ -1,82 +1,64 @@
 package com.hemika.model;
 
 public class DoctorDtoData {
-    private String department;
-    private int mobile;
-    private String specialization;
+    private String nationalID;
+    private int department;
+    private int specialization;
+    private String experience;
     private int grade_year;
-    private String email;
-   // private String personal_pic;
+    // private String personal_pic;
 
     public DoctorDtoData() { }
 
-    @Override
-    public String toString() {
-        return "DoctorDtoData{" +
-                "department='" + department + '\'' +
-                ", mobile=" + mobile +
-                ", specialization='" + specialization + '\'' +
-                ", grade_year=" + grade_year +
-                ", email='" + email + '\'' +
-                '}';
-    }
-//    @Override
-//    public String toString() {
-//        return "DoctorDtoData{" +
-//                "department='" + department + '\'' +
-//                ", mobile=" + mobile +
-//                ", specialization='" + specialization + '\'' +
-//                ", grade_year=" + grade_year +
-//                ", email='" + email + '\'' +
-//                ", personal_pic='" + personal_pic + '\'' +
-//                '}';
-//    }
-
-    public String getDepartment() {
-        return department;
+    public void setNationalID(String nationalID) {
+        this.nationalID = nationalID;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(int department) {
         this.department = department;
     }
 
-    public int getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(int mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
+    public void setSpecialization(int specialization) {
         this.specialization = specialization;
     }
 
-    public int getGrade_year() {
-        return grade_year;
+    public void setExperience(String experience) {
+        this.experience = experience;
     }
 
     public void setGrade_year(int grade_year) {
         this.grade_year = grade_year;
     }
 
-    public String getEmail() {
-        return email;
+    public String getNationalID() {
+        return nationalID;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public int getDepartment() {
+        return department;
     }
 
-//    public String getPersonal_pic() {
-//        return personal_pic;
-//    }
+    public int getSpecialization() {
+        return specialization;
+    }
 
-//    public void setPersonal_pic(String personal_pic) {
-//        this.personal_pic = personal_pic;
-//    }
+    public String getExperience() {
+        return experience;
+    }
+
+    public int getGrade_year() {
+        return grade_year;
+    }
+
+    @Override
+    public String toString() {
+        return "DoctorDtoData{" +
+                "nationalID='" + nationalID + '\'' +
+                ", department=" + department +
+                ", specialization=" + specialization +
+                ", experience='" + experience + '\'' +
+                ", grade_year=" + grade_year +
+                '}';
+    }
 }
+

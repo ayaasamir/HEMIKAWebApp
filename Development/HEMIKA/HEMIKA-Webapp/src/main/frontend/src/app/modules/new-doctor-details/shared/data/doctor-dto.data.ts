@@ -1,10 +1,10 @@
 
 export class DoctorDtoData {
-  department :string;
-  mobile :number;
-  specialization :string;
+  nationalID :string;
+  department :number;
+  specialization :number;
+  experience :string;
   grade_year :number;
-  email :string;
-  personal_pic:string;
+  // personal_pic:string;
 
 }
