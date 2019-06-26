@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient List</title>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Patient List</div>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="formData">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="Name">Patient Name</label>
+                <input type="text" class="form-control" id="Name"  formControlName="patientName" placeholder="Enter Patient Name">
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">patient status</label>
+                <select class="form-control" formControlName="patientStatus" id="exampleFormControlSelect1">
+                  <option>pending</option>
+                  <option>In Progress</option>
+                  <option>treated</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="date">Enter Start Date</label>
+                <input type="date" name="bday" class="form-control" formControlName="startDate"id="date">
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="Date">Enter End Date</label>
+                <input type="date" name="bday"  formControlName="endDate"class="form-control" >
+              </div>
+
+            </div>
+          </div>
+        </form>
+
+        <div class="card-action">
+          <button class="btn btn-success pull-right ml-2">Clear</button>
+          <button class="btn btn-danger pull-right" (click)="search()">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Search Results</div>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="formData">
+          <div class="card-sub">
+            Patient List
+          </div>
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Patient Name</th>
+              <th scope="col">Enter Date</th>
+              <th scope="col">Patient Status</th>
+              <th scope="col">Last Check</th>
+            </tr>
+            </thead>
+            <tr *ngFor="let patient of patientList;index as i;">
+              <td>{{i+1}}</td>
+              <td>{{patient.patientName}}</td>
+              <td>{{patient.startDate}}</td>
+              <td>{{patient.patientStatus}}</td>
+              <td>{{patient.lastCheck}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
