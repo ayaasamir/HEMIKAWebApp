@@ -12,6 +12,8 @@ import {HomePageComponent} from "./modules/home/components/home-page/home-page.c
 import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {CreateVisitorComponent} from "./modules/visitor-profile/components/create-visitor/create-visitor.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -24,7 +26,9 @@ const routes: Routes = [
       {path: 'robot/new', component: CreateRobotComponent},
       {path: 'robot/done', component: CreateRobotDoneComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'visitor', component: VisitorComponent}
+      {path: 'visitor', component: VisitorComponent},
+      {path: 'patientlist', component: PatientListComponent},
+      {path: 'Create/Visitor', component: CreateVisitorComponent}
 
     ]},
   {path:'', component: SimpleLayoutComponent, children:[

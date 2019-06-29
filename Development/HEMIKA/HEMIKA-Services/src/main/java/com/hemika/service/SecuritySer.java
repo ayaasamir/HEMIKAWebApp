@@ -32,7 +32,7 @@ public class SecuritySer {
                 if(hashedPassword.equals(user.getUserPassword())){
                     String token = securityManager.generateToken(user.getUserName(), hashedPassword, new Date().getTime());
                     AuthUser authUser = new AuthUser();
-                    authUser.setUserId(user.getId());
+                    authUser.setId(user.getNationalID());
                     authUser.setFullName(user.getFirstName()+ ' ' + user.getLastName());
                     authUser.setToken(token);
                     return Response.ok().entity(authUser).build();

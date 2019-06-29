@@ -12,9 +12,9 @@ public class UserRM implements RowMapper<User> {
     @Override
     public User mapRow(ResultSet row, int rowNum) throws SQLException {
         User user = new User();
-        user.setId(row.getInt("id"));
+        user.setNationalID(row.getString("national_id"));
         user.setUserName(row.getString("user_name"));
-        user.setUserPassword(row.getString("user_pass"));
+        user.setUserPassword(row.getString("hashed_password"));
         user.setFirstName(row.getString("first_name"));
         user.setLastName(row.getString("last_name"));
         user.setEmail(row.getString("email"));

@@ -3,23 +3,26 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {LoginDTO} from "../../shared/data/login-dto.data";
 import {AuthUser} from "../../shared/data/auth-vto.data";
 import {SecurityService} from "../../shared/security.service";
+import {LocalStorageService} from "../../../../infrastructure/services/local-storage.service";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  providers: [FormBuilder, SecurityService]
+  providers: [FormBuilder, SecurityService, LocalStorageService]
 })
 
 export class LoginComponent implements OnInit {
 
   authVto: AuthUser;
+
   formData: FormGroup = this.formBuilder.group({
     username: [null, [Validators.required, Validators.maxLength(25), Validators.minLength(5)]],
     password: [null, [Validators.required, Validators.minLength(8)]]
   });
 
   constructor(private formBuilder: FormBuilder,
-              private userService: SecurityService) { }
+              private userService: SecurityService,
+              private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
   }
@@ -35,7 +38,8 @@ export class LoginComponent implements OnInit {
           this.authVto = res;
           console.log("Success");
           console.log(this.authVto);
-          localStorage.setItem('token', this.authVto.token);
+          // localStorage.setItem('token', this.authVto.token);
+          this.localStorageService.setAuthUser(this.authVto);
         },
         err => {console.log(err);}
       );

@@ -4,7 +4,7 @@ import {AuthUser} from "../../modules/security/shared/data/auth-vto.data";
 @Injectable()
 export class LocalStorageService {
 
-  static AUTH_USER:string = "ISM-Auth-User"
+  static AUTH_USER:string = "Hakeim-Auth-User"
 
   constructor() { }
 

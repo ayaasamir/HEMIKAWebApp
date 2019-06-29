@@ -1,7 +1,7 @@
 package com.hemika.model.user;
 
 public class User {
-    private int id;
+    private String nationalID;
     private String userName;
     private String userPassword;
     private String firstName;
@@ -9,12 +9,21 @@ public class User {
     private String email;
     private boolean isActive;
 
-    public int getId() {
-        return id;
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+
+
+    public String getNationalID() {
+        return nationalID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNationalID(String nationalID) {
+        this.nationalID = nationalID;
     }
 
     public String getUserName() {
@@ -65,10 +74,24 @@ public class User {
         isActive = active;
     }
 
+//    @Override
+//    public String toString() {
+//        return "User{" +
+//                "id=" + id +
+//                ", userName='" + userName + '\'' +
+//                ", userPassword='" + userPassword + '\'' +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", email='" + email + '\'' +
+//                ", isActive=" + isActive +
+//                '}';
+//    }
+
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "nationalID=" + nationalID +
                 ", userName='" + userName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", firstName='" + firstName + '\'' +

@@ -33,6 +33,8 @@ import {CreateRobotDoneComponent} from "./modules/creating-users/components/crea
 import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header/doc-header.component";
 import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {CreateVisitorComponent} from "./modules/visitor-profile/components/create-visitor/create-visitor.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -44,7 +46,7 @@ import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor
     AppHeaderComponent, AppFooterComponent,HomePageComponent,
     ContainerPartComponent,FooterPartComponent,HeaderPartComponent,HomePartComponent,
     CreateUserComponent, CreateRobotComponent, CreateRobotDoneComponent,
-    DoctorDetailsComponent, VisitorComponent
+    DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,

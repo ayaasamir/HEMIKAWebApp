@@ -3,19 +3,27 @@ package com.hemika.model.security;
 import java.io.Serializable;
 
 public class AuthUser implements Serializable {
-    private int userId;
+    private String id;
     private String fullName;
     private String token;
 
     public AuthUser() {
     }
 
-    public int getUserId() {
-        return userId;
+//    public String getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(String userId) {
+//        this.userId = userId;
+//    }
+
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFullName() {
