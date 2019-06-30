@@ -156,7 +156,7 @@
                   <div class="form-group">
                     <label for="experience">Experience</label>
                     <input type="text" class="form-control input-square" id="experience"
-                           formControlName="experience" >
+                           formControlName="experience" placeholder="Enter Experience" >
                     <!--placeholder="Password">-->
                   </div>
                 </div>
@@ -177,7 +177,18 @@
                   <div class="form-group">
                     <label for="grade_year">Graduation Year</label>
                     <input type="text" class="form-control input-square" id="grade_year"
-                           formControlName="grade_year">
+                           formControlName="grade_year"  placeholder="Enter Graduation Year">
+<!--                    <input type="text" class="form-control input-square" id="grade_year"-->
+<!--                           [ngClass]="{'has-error has-feedback': formData.get('password').invalid}"-->
+<!--                           formControlName="grade_year"  placeholder="Enter Graduation Year">-->
+<!--                    <small class="form-text text-muted"-->
+<!--                           *ngIf="formData.get('grade_year').hasError('maxlength')">-->
+<!--                      Password can't exceed 4 characters.-->
+<!--                    </small>-->
+<!--                    <small class="form-text text-muted"-->
+<!--                           *ngIf="formData.get('grade_year').hasError('minlength')">-->
+<!--                      Password can't be less than 4 characters.-->
+<!--                    </small>-->
                     <!--placeholder="User Name">-->
                   </div>
                 </div>
@@ -187,7 +198,9 @@
           </div>
 
           <div class="card-action">
-            <button class="btn btn-success pull-right mb-2 ml-10 mr-5 " (click)="submit()">Submit</button>
+            <button class="btn btn-success pull-right mb-2 ml-10 mr-5 "
+                    [routerLink]="['/user/done']"
+                    (click)="submit()">Submit</button>
           </div>
 
         </div>

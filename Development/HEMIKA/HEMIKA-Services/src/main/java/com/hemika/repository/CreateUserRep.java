@@ -92,6 +92,15 @@ public class CreateUserRep {
         String sql2="INSERT INTO mydb.user_t_has_role_t (user_t_national_id,role_t_id)" +
                 "VALUES (?,?)";
         this.jdbc.update(sql2,data.getNationalID(),userData.getId());
+
+        if (data.getType() == 4){
+            String sql3="INSERT INTO mydb.visitor_t (user_t_national_id)VALUES (?)";
+            this.jdbc.update(sql3,data.getNationalID());
+        }
+        if (data.getType() == 3){
+            String sql4="INSERT INTO mydb.patient_t (user_t_national_id)VALUES (?)";
+            this.jdbc.update(sql4,data.getNationalID());
+        }
     }
 
 

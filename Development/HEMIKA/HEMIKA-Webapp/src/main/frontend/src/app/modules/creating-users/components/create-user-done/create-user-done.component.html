@@ -1,0 +1,39 @@
+
+<style>
+  h2{text-align:center;}
+</style>
+<div class="content">
+  <div class="container-fluid">
+    <h2 class="page-title "></h2>
+
+    <div class="mt-3 row">
+      <div class="offset-3 col-md-6">
+        <div class="card mb-5">
+
+          <div class="card-header">
+            <div class="card-title">CREATING DONE</div>
+          </div>
+
+          <div class="card-body">
+            <h2>Data is saved successfully .
+              Do you want to create new user?</h2>
+
+          </div>
+
+          <div class="card-action mb-3">
+            <button class="btn btn-success pull-right ml-3 "
+                    [routerLink]="['/user/new']">
+              create new user
+            </button>
+            <button class="btn btn-success pull-right ml-3 "
+                    [routerLink]="['/home']">
+              cancel
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

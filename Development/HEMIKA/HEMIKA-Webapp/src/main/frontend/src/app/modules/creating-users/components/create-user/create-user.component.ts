@@ -92,7 +92,7 @@
 //
 ///////////////////////////////////////////////////////
 import {Component} from "@angular/core";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CreateUserService} from "../../shared/createUserService";
 import {UserDtoData} from "../../shared/data/user-dto.data";
 import {UserTypeVtoData} from "../../shared/data/user-type-vto.data";
@@ -124,15 +124,15 @@ export class CreateUserComponent {
   }
 
   formData: FormGroup = this.formBuilder.group({
-    nationalID: null,
+    nationalID: [null, [Validators.required, Validators.maxLength(14), Validators.minLength(14)]],
     type: null,
     firstName: null,
     lastName: null,
     address: null,
-    mobileNumber: null,
-    userName: null,
+    mobileNumber: [null, [Validators.required, Validators.maxLength(11), Validators.minLength(11)]],
+    userName: [null, [Validators.required, Validators.maxLength(45), Validators.minLength(5)]],
     birthDate: null,
-    password: null,
+    password: [null, [Validators.required, Validators.maxLength(45), Validators.minLength(8)]],
     confirmPassword: null,
     email: null
 
@@ -152,6 +152,7 @@ export class CreateUserComponent {
     userData.confirmPassword = this.formData.get('confirmPassword').value;
     userData.email = this.formData.get('email').value;
     localStorage.setItem('nationalID', userData.nationalID);
+    //localStorage.setItem('type', userData.type);
     console.log(userData);
     this.userService.submit(userData).subscribe(
       res => {
