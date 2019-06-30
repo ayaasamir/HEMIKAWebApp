@@ -154,6 +154,7 @@ export class CreateUserComponent {
     localStorage.setItem('nationalID', userData.nationalID);
     //localStorage.setItem('type', userData.type);
     console.log(userData);
+    if(userData.password==userData.confirmPassword){
     this.userService.submit(userData).subscribe(
       res => {
         console.log('request is success');
@@ -163,6 +164,9 @@ export class CreateUserComponent {
         console.log(err);
       }
     );
+    }else{
+      console.log("password and confirmPassword must be identical");
+    }
   }
 
 
