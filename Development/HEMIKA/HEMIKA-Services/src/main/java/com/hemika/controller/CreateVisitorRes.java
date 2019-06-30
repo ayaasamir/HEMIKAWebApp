@@ -15,7 +15,7 @@ public class CreateVisitorRes {
     @Autowired
     private CreateVisitorRep repository;
     @POST
-    @Path("findPatient")
+    @Path("/findPatient")
     @Produces(MediaType.APPLICATION_JSON)
     public List<patientListVTO> findPatientData(String name) {
 
