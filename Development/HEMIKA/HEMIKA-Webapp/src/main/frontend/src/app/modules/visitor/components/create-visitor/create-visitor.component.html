@@ -1,0 +1,48 @@
+<div class="col-md-12">
+  <div class="content">
+    <div class="container-fluid">
+      <div class="mt-5 row">
+        <div class="offset-3 col-md-6">
+          <div class="card" >
+            <div class="card-header">
+              <div class="card-title">Create New Visitor Profile</div>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="formData" [ngClass]="{'has-error has-feedback':errorFlag}">
+                <div class="row">
+                  <div class="col-md-6">
+
+                    <label for="patient">Choise Patient</label>
+                    <input type="text" class="form-control" formControlName="patientName" #name placeholder="name" id="patient"  placeholder="Enter Patient Name">
+                    <small class="form-text text-muted" *ngIf="errorFlag">This patient is not in the hospital</small>
+                  </div>
+                  <!--<div class="col-md-6">-->
+
+                  <!--</div>-->
+
+                </div>
+                <button class="btn btn-success " btn-sm (click)="addText()">Add</button>
+                <div class="row">
+                  <div class="col-md-6">
+                    <table class="offset-1 " class="table table-striped mt-3">
+                      <tr *ngFor="let contact of contacts" style="margin-bottom: 20px;">
+                        <td>{{contact.name}}</td>
+
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-action">
+                  <button class="btn btn-danger  pull-right ml-2" type="button">Next</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
