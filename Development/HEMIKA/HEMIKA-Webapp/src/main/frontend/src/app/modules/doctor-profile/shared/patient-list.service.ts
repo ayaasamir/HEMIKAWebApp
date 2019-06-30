@@ -11,14 +11,7 @@ export class  PatientListService{
   }
   search(data:PatientListDto){
     return this.http.post<patientListVTO[]>(this.BASE_URL+"/search",data);
-    // return this.http.get<patientListVTO[]> (this.BASE_URL+"/search" );
-    // return this.http.get<patientListVTO> (this.BASE_URL+"/find",data);
-
   }
-  // findPatieantData(){
-  //   return this.http.get<PatientListDto> (this.BASE_URL+"/findPatientData",);
-  //
-  // }
 
   findPatientData(data:PatientListDto){
     return this.http.post<patientListVTO[]> (this.BASE_URL+"/findPatient",data );
