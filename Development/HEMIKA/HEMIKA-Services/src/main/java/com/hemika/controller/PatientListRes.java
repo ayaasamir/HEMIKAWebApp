@@ -42,34 +42,34 @@ public class PatientListRes {
     @Path("/findPatient")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public List<patientListVTO> findPatientData(PatientListDto data) {
-        if ((data.getPatientName() != null && (data.getPatientStatus() == null ))&& ((data.getStartDate() == null )&& (data.getEndDate() == null)) ) {
+    public List<patientListVTO>  findPatientData(PatientListDto data) {
             List<patientListVTO> result = this.repository.findByName(data.getPatientName());
-            return result;
-        }
-        else if  ((data.getPatientName() == null && (data.getPatientStatus() != null ))&& ((data.getStartDate() == null )&& (data.getEndDate() == null)) ){
-            List<patientListVTO> result = this.repository.findBystatus(data.getPatientStatus());
-            System.out.println(data);
             System.out.println(result);
             return result;
-        }
-        else if (data.getPatientName() != "" && data.getPatientStatus() != "" && data.getStartDate() == "" && data.getEndDate() == ""){
-            List<patientListVTO> result = this.repository.findByNameAndStatus(data.getPatientName(),data.getPatientStatus());
-            return result;
-        }
-        else if ((data.getPatientName() == null && (data.getPatientStatus() == null ))&& ((data.getStartDate() != null )&& (data.getEndDate() != null))){
-            List<patientListVTO> result = this.repository.findByDate(data.getStartDate(),data.getEndDate());
-            return result;
-        }
-        else if ((data.getPatientName() != null && (data.getPatientStatus() != null ))&& ((data.getStartDate() != null )&& (data.getEndDate() != null))){
-            List<patientListVTO> result = this.repository.findPatientByAllData(data.getPatientName(),data.getPatientStatus(),data.getStartDate(),data.getEndDate());
-            return result;
-        }
-        else{
-            //TODO end exception/ error handling instead of find all
-            List<patientListVTO> result = this.repository.findAll();
-            return result;
-        }
+
+//        else if  ((data.getPatientName() == null && (data.getPatientStatus() != null ))&& ((data.getStartDate() == null )&& (data.getEndDate() == null)) ){
+//            List<patientListVTO> result = this.repository.findBystatus(data.getPatientStatus());
+//            System.out.println(data);
+//            System.out.println(result);
+//            return result;
+//        }
+//        else if (data.getPatientName() != "" && data.getPatientStatus() != "" && data.getStartDate() == "" && data.getEndDate() == ""){
+//            List<patientListVTO> result = this.repository.findByNameAndStatus(data.getPatientName(),data.getPatientStatus());
+//            return result;
+//        }
+//        else if ((data.getPatientName() == null && (data.getPatientStatus() == null ))&& ((data.getStartDate() != null )&& (data.getEndDate() != null))){
+//            List<patientListVTO> result = this.repository.findByDate(data.getStartDate(),data.getEndDate());
+//            return result;
+//        }
+//        else if ((data.getPatientName() != null && (data.getPatientStatus() != null ))&& ((data.getStartDate() != null )&& (data.getEndDate() != null))){
+//            List<patientListVTO> result = this.repository.findPatientByAllData(data.getPatientName(),data.getPatientStatus(),data.getStartDate(),data.getEndDate());
+//            return result;
+//        }
+//        else{
+//            //TODO end exception/ error handling instead of find all
+//            List<patientListVTO> result = this.repository.findAll();
+//            return result;
+//        }
 
 
     }

@@ -2,6 +2,8 @@ package com.hemika.configuration;
 
 
 import com.hemika.controller.CreateUserRes;
+import com.hemika.controller.CreateVisitorRes;
+import com.hemika.controller.PatientListRes;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 

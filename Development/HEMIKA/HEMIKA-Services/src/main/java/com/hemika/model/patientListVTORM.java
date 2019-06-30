@@ -11,7 +11,7 @@ public class patientListVTORM implements RowMapper<patientListVTO> {
         patientListVTO data = new patientListVTO();
         data.setStartDate(rs.getString("date"));
         data.setPatientStatus(rs.getString("status"));
-        data.setPatientName(rs.getString("name"));
+        data.setPatientName(rs.getString("fullname"));
         System.out.println(data);
         return data;
     }
