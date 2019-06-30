@@ -9,7 +9,7 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <div class="card-title">Patient List</div>
+        <div class="card-title">Search For Patient</div>
       </div>
       <div class="card-body">
         <form [formGroup]="formData">
@@ -19,34 +19,6 @@
                 <label for="Name">Patient Name</label>
                 <input type="text" class="form-control" id="Name"  formControlName="patientName" placeholder="Enter Patient Name">
               </div>
-
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">patient status</label>
-                <select class="form-control" formControlName="patientStatus" id="exampleFormControlSelect1">
-                  <option>pending</option>
-                  <option>In Progress</option>
-                  <option>treated</option>
-                </select>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="date">Enter Start Date</label>
-                <input type="date" name="bday" class="form-control" formControlName="startDate"id="date">
-              </div>
-
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="Date">Enter End Date</label>
-                <input type="date" name="bday"  formControlName="endDate"class="form-control" >
-              </div>
-
             </div>
           </div>
         </form>
@@ -85,7 +57,7 @@
               <td>{{patient.patientName}}</td>
               <td>{{patient.startDate}}</td>
               <td>{{patient.patientStatus}}</td>
-              <td>{{patient.lastCheck}}</td>
+              <td><button type="button" class="btn btn-info">View</button></td>
             </tr>
             </tbody>
           </table>
