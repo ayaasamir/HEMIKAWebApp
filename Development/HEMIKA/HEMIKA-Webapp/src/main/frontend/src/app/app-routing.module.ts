@@ -29,7 +29,7 @@ const routes: Routes = [
       {path: 'login', component: LoginComponent},
       {path: 'visitor', component: VisitorComponent},
       {path: 'patientlist', component:PatientListComponent},
-      {path: 'Create/Visitor', component:CreateVisitorComponent},
+      {path: "Create/Visitor", component:CreateVisitorComponent},
 
       {path: 'visitor', component: VisitorComponent},
       {path: 'user/done', component: CreateUserDoneComponent}

@@ -30,10 +30,10 @@ import {HeaderPartComponent} from "./modules/home-part/header-part/header-part.c
 import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {HomeComponent} from "./modules/home/home.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
-import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header/doc-header.component";
-import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
+// import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header/doc-header.component";
+// import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
-import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+// import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
@@ -41,7 +41,7 @@ import {CreateUserDoneComponent} from "./modules/creating-users/components/creat
 
 @NgModule({
   declarations: [
-    LayoutComponent,DocHeaderComponent,DocSideBarComponent,
+    LayoutComponent,
     FullLayoutComponent, SimpleLayoutComponent, AppHeaderComponent,
     AppFooterComponent, PatientDetailsComponent,AppComponent,HomeComponent,
     PatientProfileComponent, PatientHistoryComponent, LoginComponent,
@@ -49,8 +49,8 @@ import {CreateUserDoneComponent} from "./modules/creating-users/components/creat
     ContainerPartComponent,FooterPartComponent,HeaderPartComponent,HomePartComponent,
     CreateUserComponent, CreateRobotComponent, CreateRobotDoneComponent,
     DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent,
-    CreateUserDoneComponent,
-    DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent
+    CreateUserDoneComponent
+
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,

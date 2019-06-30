@@ -4,11 +4,11 @@ import {CreateVisitorService} from "../../shared/create-visitor.service";
 import {patientListVTO} from "../../../doctor-profile/shared/data/patient-list.vto.data";
 import {Contact} from "../../shared/data/contacts";
 
-@Component({
-  selector: 'app-create-visitor',
-  templateUrl: './create-visitor.component.html',
-  styleUrls: ['./create-visitor.component.scss']
-})
+// @Component({
+//   selector: 'app-create-visitor',
+//   templateUrl: './create-visitor.component.html',
+//   styleUrls: ['./create-visitor.component.scss']
+// })
 // export class CreateVisitorComponent implements OnInit {
 //
 //   constructor() { }
