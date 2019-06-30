@@ -8,7 +8,7 @@ import {PatientListDto} from "../../shared/data/patient-list.dto.data";
 @Component({
   selector: 'patient-list',
   templateUrl:'./patient-list.component.html' ,
-  styleUrls: ['./patient-list.component.css'],
+  // styleUrls: ['./patient-list.component.css'],
   providers:[FormBuilder,PatientListService]
 })
 export class PatientListComponent implements OnInit {

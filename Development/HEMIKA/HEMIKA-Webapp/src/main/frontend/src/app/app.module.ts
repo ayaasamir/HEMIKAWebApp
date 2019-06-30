@@ -1,19 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {LayoutComponent} from "./layout/layout.component";
 import {FullLayoutComponent} from "./layout/components/full-layout/full-layout.component";
 import {SimpleLayoutComponent} from "./layout/components/simple-layout/simple-layout.component";
-import { AppHeaderComponent } from './layout/components/full-layout/components/app-header/app-header.component';
-import { AppFooterComponent } from './layout/components/full-layout/components/app-footer/app-footer.component';
+import {AppHeaderComponent} from './layout/components/full-layout/components/app-header/app-header.component';
+import {AppFooterComponent} from './layout/components/full-layout/components/app-footer/app-footer.component';
 import {CommonModule} from "@angular/common";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { PatientDetailsComponent } from './modules/patient-profile/components/patient-details/patient-details.component';
-import { PatientProfileComponent } from './modules/patient-profile/patient-profile.component';
-import { PatientHistoryComponent } from './modules/patient-profile/components/patient-history/patient-history.component';
-import { LoginComponent } from './modules/security/components/login/login.component';
+import {PatientDetailsComponent} from './modules/patient-profile/components/patient-details/patient-details.component';
+import {PatientProfileComponent} from './modules/patient-profile/patient-profile.component';
+import {PatientHistoryComponent} from './modules/patient-profile/components/patient-history/patient-history.component';
+import {LoginComponent} from './modules/security/components/login/login.component';
 import {CreateUserComponent} from "./modules/creating-users/components/create-user/create-user.component";
 import {DoctorDetailsComponent} from "./modules/new-doctor-details/components/doctor-details/doctor-details.component";
 //import {ContainerPartComponent} from "./modules/home/components/container-part/container-part.component";
@@ -33,6 +33,10 @@ import {CreateRobotDoneComponent} from "./modules/creating-users/components/crea
 // import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header/doc-header.component";
 // import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
+import {DoctorProfileComponent} from "./modules/doctor-profile/components/doctor-profile/doctor-profile.component";
+import {PatientsComponent} from "./modules/doctor-profile/components/doctor-profile/components/patients/patients.component";
+import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
+
 // import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
@@ -42,15 +46,34 @@ import {CreateUserDoneComponent} from "./modules/creating-users/components/creat
 @NgModule({
   declarations: [
     LayoutComponent,
-    FullLayoutComponent, SimpleLayoutComponent, AppHeaderComponent,
-    AppFooterComponent, PatientDetailsComponent,AppComponent,HomeComponent,
-    PatientProfileComponent, PatientHistoryComponent, LoginComponent,
-    AppHeaderComponent, AppFooterComponent,HomePageComponent,
-    ContainerPartComponent,FooterPartComponent,HeaderPartComponent,HomePartComponent,
-    CreateUserComponent, CreateRobotComponent, CreateRobotDoneComponent,
-    DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent,
+    DoctorProfileComponent,
+    PatientsComponent,
+    ProfileComponent,
+    FullLayoutComponent,
+    SimpleLayoutComponent,
+    AppHeaderComponent,
+    AppFooterComponent,
+    PatientDetailsComponent,
+    AppComponent,
+    HomeComponent,
+    PatientProfileComponent,
+    PatientHistoryComponent,
+    LoginComponent,
+    AppHeaderComponent,
+    AppFooterComponent,
+    HomePageComponent,
+    ContainerPartComponent,
+    FooterPartComponent,
+    HeaderPartComponent,
+    HomePartComponent,
+    CreateUserComponent,
+    CreateRobotComponent,
+    CreateRobotDoneComponent,
+    DoctorDetailsComponent,
+    VisitorComponent,
+    PatientListComponent,
+    CreateVisitorComponent,
     CreateUserDoneComponent
-
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
@@ -59,4 +82,5 @@ import {CreateUserDoneComponent} from "./modules/creating-users/components/creat
   providers: [],
   bootstrap: [LayoutComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

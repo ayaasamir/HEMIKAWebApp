@@ -12,11 +12,11 @@
 //
 //@Component({
 //  selector: 'doctor-details',
-//  templateUrl: './doctor-details.component.html',
-//  styleUrls: ['./doctor-details.component.scss'],
+//  templateUrl: './doctor-profile.component.html',
+//  styleUrls: ['./doctor-profile.component.scss'],
 //  providers : [FormBuilder,DoctorService,LoadService]
 //})
-//export class DoctorDetailsComponent {
+//export class DoctorProfileComponent {
 //constructor(private formBuilder : FormBuilder ,
 //private doctorService:DoctorService,
 //private loadService: LoadService) { }
