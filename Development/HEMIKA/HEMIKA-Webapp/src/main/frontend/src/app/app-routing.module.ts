@@ -12,6 +12,8 @@ import {HomePageComponent} from "./modules/home/components/home-page/home-page.c
 import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
+import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 
 const routes: Routes = [
@@ -25,6 +27,10 @@ const routes: Routes = [
       {path: 'robot/new', component: CreateRobotComponent},
       {path: 'robot/done', component: CreateRobotDoneComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'visitor', component: VisitorComponent},
+      {path: 'patientlist', component:PatientListComponent},
+      {path: 'Create/Visitor', component:CreateVisitorComponent},
+
       {path: 'visitor', component: VisitorComponent},
       {path: 'user/done', component: CreateUserDoneComponent}
 

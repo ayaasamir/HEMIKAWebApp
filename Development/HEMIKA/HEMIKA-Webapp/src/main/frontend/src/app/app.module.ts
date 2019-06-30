@@ -34,7 +34,8 @@ import {DocHeaderComponent} from "./modules/doctor-profile/components/doc-header
 import {DocSideBarComponent} from "./modules/doctor-profile/components/doc-side-bar/doc-side-bar.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
 import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
-import {CreateVisitorComponent} from "./modules/visitor-profile/components/create-visitor/create-visitor.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -48,7 +49,8 @@ import {CreateUserDoneComponent} from "./modules/creating-users/components/creat
     ContainerPartComponent,FooterPartComponent,HeaderPartComponent,HomePartComponent,
     CreateUserComponent, CreateRobotComponent, CreateRobotDoneComponent,
     DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent,
-    CreateUserDoneComponent
+    CreateUserDoneComponent,
+    DoctorDetailsComponent, VisitorComponent,PatientListComponent,CreateVisitorComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
