@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 
 @Component({
-  selector: 'create-robot',
+  selector: 'doctor-patients',
   templateUrl: './patients.component.html',
   styleUrls: ['./patients.component.scss']
 })
