@@ -1,3 +1,4 @@
+///<reference path="modules/doctor-profile/components/patient-list/patient-list.component.ts"/>
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
@@ -38,10 +39,11 @@ import {PatientsComponent} from "./modules/doctor-profile/components/doctor-prof
 import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
 
 // import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
-import {PatientListComponent} from "./modules/doctor-profile/components/doctor-profile/components/patient-list/patient-list.component";
+// import {PatientListComponent} from "./modules/doctor-profile/components/doctor-profile/components/patient-list/patient-list.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
