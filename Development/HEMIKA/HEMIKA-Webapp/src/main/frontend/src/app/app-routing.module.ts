@@ -35,7 +35,7 @@ const routes: Routes = [
       {path: 'login', component: LoginComponent},
       {path: 'visitor', component: VisitorComponent},
       {path: 'visitor/profile', component: VisitorProfileComponent},
-      {path: 'patientlist', component:PatientListComponent},
+      {path: 'patient/list', component:PatientListComponent},
       {path: "Create/Visitor", component:CreateVisitorComponent},
       {path: 'user/done', component: CreateUserDoneComponent},
       {
