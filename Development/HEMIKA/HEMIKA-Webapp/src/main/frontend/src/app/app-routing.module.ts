@@ -19,6 +19,7 @@ import {DoctorProfileComponent} from "./modules/doctor-profile/components/doctor
 import {PatientsComponent} from "./modules/doctor-profile/components/doctor-profile/components/patients/patients.component";
 import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
 import {PatientDetailsComponent} from "./modules/patient-profile/components/patient-details/patient-details.component";
+import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -33,6 +34,7 @@ const routes: Routes = [
       {path: 'robot/done', component: CreateRobotDoneComponent},
       {path: 'login', component: LoginComponent},
       {path: 'visitor', component: VisitorComponent},
+      {path: 'visitor/profile', component: VisitorProfileComponent},
       {path: 'patientlist', component:PatientListComponent},
       {path: "Create/Visitor", component:CreateVisitorComponent},
       {path: 'user/done', component: CreateUserDoneComponent},
@@ -50,4 +52,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

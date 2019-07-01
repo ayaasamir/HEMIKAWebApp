@@ -22,6 +22,8 @@ export class AppHeaderComponent implements OnInit {
         this.currentRoute == '/doctor/patients');
     } else if (role == 'patient') {
       return (this.currentRoute == '/patient/profile');
+    } else if (role == 'visitor') {
+      return (this.currentRoute == '/visitor/profile');
     }
 
     return false;
