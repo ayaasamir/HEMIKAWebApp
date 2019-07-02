@@ -42,6 +42,11 @@ import {PatientListComponent} from "./modules/doctor-profile/components/doctor-p
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
+import {AboutComponent} from "./modules/home/components/about/about.component";
+import {ContactComponent} from "./modules/home/components/contact/contact.component";
+import {ServicesComponent} from "./modules/home/components/services/services.component";
+import {DoctorsComponent} from "./modules/home/components/doctors/doctors.component";
+import {NewsComponent} from "./modules/home/components/news/news.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -75,7 +80,12 @@ import {VisitorProfileComponent} from "./modules/visitor/components/visitor-prof
     PatientListComponent,
     CreateVisitorComponent,
     CreateUserDoneComponent,
-    VisitorProfileComponent
+    VisitorProfileComponent,
+    AboutComponent,
+    ContactComponent,
+    ServicesComponent,
+    DoctorsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
