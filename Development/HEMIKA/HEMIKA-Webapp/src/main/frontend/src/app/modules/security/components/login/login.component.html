@@ -48,6 +48,67 @@
 
 
 
+<!--<div class="limiter">-->
+  <!--<div class="container-login100" style="background-image: url('../frontend/src/assets/img/bg-01.jpg');">-->
+    <!--<div class="wrap-login100 p-t-30 p-b-50">-->
+				<!--<span class="login100-form-title p-b-41">-->
+					<!--Account Login-->
+				<!--</span>-->
+      <!--<form [formGroup]="formData" class="login100-form validate-form p-b-33 p-t-5">-->
+
+<!--<div class="form-group">-->
+          <!--<div class="wrap-input100 validate-input" data-validate = "Enter username">-->
+            <!--<input class="input100" type="text" name="username" placeholder="User name"-->
+                   <!--class="form-control" formControlName="username">-->
+            <!--&lt;!&ndash;&lt;!&ndash;[ngClass]="{'has-error has-feedback': formData.get('username').invalid}">&ndash;&gt;>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span class="focus-input100" data-placeholder="&#xe82a;"></span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="form-text text-muted"&ndash;&gt;-->
+            <!--&lt;!&ndash;*ngIf="formData.get('username').hasError('required')">&ndash;&gt;-->
+            <!--&lt;!&ndash;User Name is mandatory.&ndash;&gt;-->
+            <!--&lt;!&ndash;</small>&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="form-text text-muted"&ndash;&gt;-->
+            <!--&lt;!&ndash;*ngIf="formData.get('username').hasError('maxlength')">&ndash;&gt;-->
+            <!--&lt;!&ndash;User Name can't exceed 25 characters.&ndash;&gt;-->
+            <!--&lt;!&ndash;</small>&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="form-text text-muted"&ndash;&gt;-->
+            <!--&lt;!&ndash;*ngIf="formData.get('username').hasError('minlength')">&ndash;&gt;-->
+            <!--&lt;!&ndash;User Name can't be less than 5 characters.&ndash;&gt;-->
+            <!--&lt;!&ndash;</small>&ndash;&gt;-->
+          <!--</div>-->
+
+          <!--<div class="wrap-input100 validate-input" data-validate="Enter password">-->
+            <!--<input class="input100" type="password" name="pass" placeholder="Password"-->
+                   <!--class="form-control" formControlName="password">-->
+            <!--&lt;!&ndash;[ngClass]="{'has-error has-feedback': formData.get('password').invalid}"&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<span class="focus-input100" data-placeholder="&#xe80f;"></span>&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="form-text text-muted"&ndash;&gt;-->
+            <!--&lt;!&ndash;*ngIf="formData.get('password').hasError('required')">&ndash;&gt;-->
+            <!--&lt;!&ndash;Password is mandatory.&ndash;&gt;-->
+            <!--&lt;!&ndash;</small>&ndash;&gt;-->
+            <!--&lt;!&ndash;<small class="form-text text-muted"&ndash;&gt;-->
+            <!--&lt;!&ndash;*ngIf="formData.get('password').hasError('minlength')">&ndash;&gt;-->
+            <!--&lt;!&ndash;Password can't be less than 7 characters.&ndash;&gt;-->
+            <!--&lt;!&ndash;</small>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<div class="container-login100-form-btn m-t-32">-->
+          <!--<button class="login100-form-btn" (click)="login()">-->
+            <!--Login-->
+          <!--</button>-->
+        <!--</div>-->
+
+      <!--</form>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<!--<div id="dropDownSelect1"></div>-->
+
+
 <div class="limiter">
   <div class="container-login100" style="background-image: url('../frontend/src/assets/img/bg-01.jpg');">
     <div class="wrap-login100 p-t-30 p-b-50">
@@ -55,40 +116,18 @@
 					Account Login
 				</span>
       <form [formGroup]="formData" class="login100-form validate-form p-b-33 p-t-5">
+
         <div class="form-group">
-          <div class="wrap-input100 validate-input" data-validate = "Enter username">
+          <div class="wrap-input100 validate-input" data-validate = "Enter username" >
             <input class="input100" type="text" name="username" placeholder="User name"
                    class="form-control" formControlName="username">
-            <!--&lt;!&ndash;[ngClass]="{'has-error has-feedback': formData.get('username').invalid}">&ndash;&gt;>-->
-            <!--<span class="focus-input100" data-placeholder="&#xe82a;"></span>-->
-            <!--<small class="form-text text-muted"-->
-            <!--*ngIf="formData.get('username').hasError('required')">-->
-            <!--User Name is mandatory.-->
-            <!--</small>-->
-            <!--<small class="form-text text-muted"-->
-            <!--*ngIf="formData.get('username').hasError('maxlength')">-->
-            <!--User Name can't exceed 25 characters.-->
-            <!--</small>-->
-            <!--<small class="form-text text-muted"-->
-            <!--*ngIf="formData.get('username').hasError('minlength')">-->
-            <!--User Name can't be less than 5 characters.-->
-            <!--</small>-->
+            <span class="focus-input100" data-placeholder="&#xe82a;"></span>
           </div>
 
           <div class="wrap-input100 validate-input" data-validate="Enter password">
             <input class="input100" type="password" name="pass" placeholder="Password"
                    class="form-control" formControlName="password">
-            <!--[ngClass]="{'has-error has-feedback': formData.get('password').invalid}"-->
-
-            <!--<span class="focus-input100" data-placeholder="&#xe80f;"></span>-->
-            <!--<small class="form-text text-muted"-->
-            <!--*ngIf="formData.get('password').hasError('required')">-->
-            <!--Password is mandatory.-->
-            <!--</small>-->
-            <!--<small class="form-text text-muted"-->
-            <!--*ngIf="formData.get('password').hasError('minlength')">-->
-            <!--Password can't be less than 7 characters.-->
-            <!--</small>-->
+            <span class="focus-input100" data-placeholder="&#xe80f;"></span>
           </div>
         </div>
 
