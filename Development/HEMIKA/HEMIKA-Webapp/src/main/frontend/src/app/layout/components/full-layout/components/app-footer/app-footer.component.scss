@@ -1,3 +1,33 @@
 .site-footer {
   padding-bottom: 0;
 }
+//const routes: Routes = [
+//                       {path: '', pathMatch: 'full', redirectTo: 'home'},
+//{
+//  path: '', component: FullLayoutComponent, children: [
+//{ path: 'home', component: HomeComponent, children: [
+//  {path: 'home/page', component: HomePageComponent},
+//{path: 'doctors', component: DoctorsComponent}
+//]
+//},
+//{path: 'home/part', component: HomePartComponent},
+//{path: 'user/new', component: CreateUserComponent},
+//{path: 'patient/profile', component: PatientProfileComponent},
+//{path: 'user/doctor', component: DoctorDetailsComponent},
+//{path: 'robot/new', component: CreateRobotComponent},
+//{path: 'robot/done', component: CreateRobotDoneComponent},
+//{path: 'login', component: LoginComponent},
+//{path: 'visitor', component: VisitorComponent},
+//{path: 'visitor/profile', component: VisitorProfileComponent},
+//{path: 'patient/list', component:PatientListComponent},
+//{path: "Create/Visitor", component:CreateVisitorComponent},
+//{path: 'user/done', component: CreateUserDoneComponent},
+//{
+//  path: 'doctor', component: DoctorProfileComponent, children: [
+//{path: 'patients', component: PatientsComponent},
+//{path: 'profile', component: ProfileComponent}
+//]
+//}
+//]
+//}
+//];

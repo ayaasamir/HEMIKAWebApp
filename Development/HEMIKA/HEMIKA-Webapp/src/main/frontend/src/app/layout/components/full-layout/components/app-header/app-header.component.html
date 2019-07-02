@@ -257,6 +257,20 @@
 
 
 <!--////////////////////////////////////////////////////////////////-->
+<!--<div class="navbar">-->
+<!--  <a href="#home">Home</a>-->
+<!--  <a href="#news">News</a>-->
+<!--  <div class="dropdown">-->
+<!--    <button class="dropbtn">Dropdown-->
+<!--      <i class="fa fa-caret-down"></i>-->
+<!--    </button>-->
+<!--    <div class="dropdown-content">-->
+<!--      <a href="#">Link 1</a>-->
+<!--      <a href="#">Link 2</a>-->
+<!--      <a href="#">Link 3</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 <header role="banner">
   <div class="top-bar">
     <div class="container">
@@ -268,56 +282,23 @@
             <li><a href="#"><span class="fa fa-instagram"></span></a></li>
           </ul>
         </div>
+
         <div class="col-md-6 col-sm-6 col-7 text-right">
           <p class="mb-0">
-<!--          <ul class="nav navbar-nav navbar-right">-->
-<!--            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-<!--          </ul>-->
-<!--          ///////////////////////////////////-->
             <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/login']">Login</a>
+               [routerLink]="['/login']">  Login  </a>
             <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/home']">Logout</a>
-<!--            //////////////////////////-->
-<!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">create-->
-<!--              <div class="dropdown">-->
-
-<!--              <div class="dropdown-content">-->
-<!--                <ul>-->
-<!--                  <li><a href="#" [routerLink]="['/user/new']" >user</a></li>-->
-<!--                  <li><a href="#" [routerLink]="['/robot/new']" >robot</a></li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            </a>-->
-
-<!--          </p>-->
-
-
-<!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">create</a>-->
-<!--////////////////////////////////////////////-->
-                      <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/user/new']" >create</a>
-<!--          ////////////////////////////////-->
-<!--          <div class="collapse navbar-collapse" id="navbarsExample05">-->
-<!--            <ul class="navbar-nav ml-auto">-->
-<!--              <li class="nav-item dropdown">-->
-<!--                <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
-<!--                <div class="dropdown-menu" aria-labelledby="dropdown04">-->
-<!--                  <a class="dropdown-item" href="#">Institute</a>-->
-<!--                  <a class="dropdown-item" href="#">Departments</a>-->
-<!--                  <a class="dropdown-item" href="services.html">Services</a>-->
-<!--                </div>-->
-
-<!--              </li>-->
-<!--            </ul>-->
-<!--        </div>-->
+               [routerLink]="['/home']">   Logout  </a>
+            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
+               [routerLink]="['/user/new']" > create user</a>
+            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
+               [routerLink]="['/robot/new']" > create robot</a>
           </p>
         </div>
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/home'">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/home/page'|| currentRoute == '/home'">
     <div class="container">
       <a class="navbar-brand" routerLink="/home">HAKEIM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -327,32 +308,48 @@
       <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/home">Home</a>
+            <a class="nav-link" routerLink="/home">Home</a>
+<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="#">Institute</a>
-              <a class="dropdown-item" href="#">Departments</a>
-              <a class="dropdown-item" href="services.html">Services</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/doctors">Doctors</a>
+          </li>
 
+
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="dropdown04">-->
+<!--              <a class="dropdown-item" href="#">Institute</a>-->
+<!--              <a class="dropdown-item" href="#">Departments</a>-->
+<!--              <a class="dropdown-item" href="services.html">Services</a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" routerLink="/doctors" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="dropdown05">-->
+<!--              <a class="dropdown-item" routerLink="/doctors">Find Doctors</a>-->
+<!--              <a class="dropdown-item" href="#">Practitioner</a>-->
+<!--            </div>-->
+<!--          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="../doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown05">
-              <a class="dropdown-item" href="../doctors.html">Find Doctors</a>
-              <a class="dropdown-item" href="#">Practitioner</a>
+
+            <a class="nav-link dropdown-toggle" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown05">>
+              <a class="dropdown-item" routerLink="/user/new">User</a>
+              <a class="dropdown-item" routerLink="/robot/new">Robot</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -368,7 +365,8 @@
       <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/home/part">Home</a>
+<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
+            <a class="nav-link active" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/doctor/patients">My Patients</a>
@@ -394,6 +392,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link active" routerLink="/home">Home</a>
+<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/patient/profile">My Profile</a>
@@ -412,7 +411,9 @@
       <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
             <a class="nav-link active" routerLink="/home">Home</a>
+
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/visitor/profile">My Profile</a>

@@ -13,19 +13,31 @@ import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
-import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/doctor-profile/components/patient-list/patient-list.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 import {DoctorProfileComponent} from "./modules/doctor-profile/components/doctor-profile/doctor-profile.component";
 import {PatientsComponent} from "./modules/doctor-profile/components/doctor-profile/components/patients/patients.component";
 import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
 import {PatientDetailsComponent} from "./modules/patient-profile/components/patient-details/patient-details.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
+import {DoctorsComponent} from "./modules/home/components/doctors/doctors.component";
+import {HomeComponent} from "./modules/home/home.component";
+//import {NewsComponent} from "./modules/home/components/news/news.component";
+import {ContactComponent} from "./modules/home/components/contact/contact.component";
+import {ServicesComponent} from "./modules/home/components/services/services.component";
+import {AboutComponent} from "./modules/home/components/about/about.component";
+import {NewsComponent} from "./modules/home/components/news/news.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {
     path: '', component: FullLayoutComponent, children: [
-      {path: 'home', component: HomePageComponent},
+       {path: 'home', component: HomePageComponent},
+       {path: 'doctors', component: DoctorsComponent},
+      {path: 'news', component: NewsComponent},
+      {path: 'contact', component: ContactComponent},
+      {path: 'services', component: ServicesComponent},
+      {path: 'about', component: AboutComponent},
       {path: 'home/part', component: HomePartComponent},
       {path: 'user/new', component: CreateUserComponent},
       // {path: 'patient/profile', component: PatientProfileComponent},
@@ -42,6 +54,16 @@ const routes: Routes = [
         path: 'doctor', component: DoctorProfileComponent, children: [
           {path: 'patients', component: PatientsComponent},
           {path: 'profile', component: ProfileComponent}
+        ]
+      },
+      {
+        path: 'home/page', component: HomeComponent, children: [
+          {path: 'home', component: HomePageComponent},
+          {path: 'news', component: NewsComponent},
+          {path: 'doctors', component: DoctorsComponent},
+          {path: 'contact', component: ContactComponent},
+          {path: 'services', component: ServicesComponent},
+          {path: 'about', component: AboutComponent}
         ]
       }
     ]
