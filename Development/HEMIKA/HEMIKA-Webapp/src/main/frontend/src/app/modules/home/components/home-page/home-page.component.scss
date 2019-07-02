@@ -1,0 +1,120 @@
+//<link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet">
+//
+//<link rel="stylesheet" href="css/bootstrap.css">
+//<link rel="stylesheet" href="css/animate.css">
+//<link rel="stylesheet" href="css/owl.carousel.min.css">
+//<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+//<link rel="stylesheet" href="css/jquery.timepicker.css">
+//
+//<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+//<link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+//<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+//
+//
+//<!-- Theme Style -->
+//<link rel="stylesheet" href="css/style.css">
+img {
+  width: 100%;
+}
+
+.custom-border {
+  border-right: 1px #283E56 solid;
+}
+
+.col-form-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.width {
+  width: 21%;
+  display: inline-block;
+  margin: 2%;
+}
+.section {
+  padding-bottom: 2rem;
+}
+
+.details-padding {
+  padding: 7rem 2rem 2rem;
+}
+
+.diagnosis-padding {
+  padding: 2rem 3rem;
+}
+
+img {
+  width: 100%;
+}
+
+.custom-border {
+  border-right: 1px #283E56 solid;
+}
+
+.col-form-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn {
+  margin-top: 10%;
+}
+.section {
+  padding-top: 2rem;
+}
+
+.diagnosis-padding {
+  padding: 2rem 3rem;
+}
+
+.col-form-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+element.style {
+}
+.owl-carousel.home-slider .slider-item .slider-text {
+  color: #fff;
+  height: calc(100vh - 117px);
+  min-height: 700px;
+}
+.align-items-center {
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+
+element.style {
+}
+.owl-carousel.home-slider .owl-nav {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+  display: none;
+}
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
