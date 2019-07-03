@@ -27,6 +27,7 @@ import {ContactComponent} from "./modules/home/components/contact/contact.compon
 import {ServicesComponent} from "./modules/home/components/services/services.component";
 import {AboutComponent} from "./modules/home/components/about/about.component";
 import {NewsComponent} from "./modules/home/components/news/news.component";
+import {ItProfileComponent} from "./modules/it-profile/it-profile.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -65,7 +66,8 @@ const routes: Routes = [
           {path: 'services', component: ServicesComponent},
           {path: 'about', component: AboutComponent}
         ]
-      }
+      },
+      {path: 'it', component: ItProfileComponent}
     ]
   }
 ];

@@ -47,6 +47,7 @@ import {ServicesComponent} from "./modules/home/components/services/services.com
 import {DoctorsComponent} from "./modules/home/components/doctors/doctors.component";
 import {NewsComponent} from "./modules/home/components/news/news.component";
 import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {ItProfileComponent} from "./modules/it-profile/it-profile.component";
 //import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -85,7 +86,8 @@ import {PatientListComponent} from "./modules/doctor-profile/components/patient-
     ContactComponent,
     ServicesComponent,
     DoctorsComponent,
-    NewsComponent
+    NewsComponent,
+    ItProfileComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
