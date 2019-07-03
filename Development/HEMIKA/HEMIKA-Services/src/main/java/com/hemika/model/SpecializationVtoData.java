@@ -2,7 +2,7 @@ package com.hemika.model;
 
 public class SpecializationVtoData {
     private int id;
-    private String name;
+    private String specialName;
 
     public SpecializationVtoData() {
     }
@@ -11,23 +11,23 @@ public class SpecializationVtoData {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getSpecialName() {
+        return specialName;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSpecialName(String specialName) {
+        this.specialName = specialName;
     }
 
     @Override
     public String toString() {
         return "SpecializationVtoData{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", specialName='" + specialName + '\'' +
                 '}';
     }
 }

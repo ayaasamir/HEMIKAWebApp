@@ -298,7 +298,9 @@
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/home/page'|| currentRoute == '/home'">
+<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'">-->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' ||currentRoute == '/patient/profile' ||currentRoute == '/user/doctor' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'||currentRoute == '/user/done'||currentRoute == '/home'||currentRoute == '/services'||currentRoute == '/doctors'||currentRoute == '/about'||currentRoute == '/contact'||currentRoute == '/news'||currentRoute == '/visitor/profile'||currentRoute == '/visitor'||currentRoute == '/login'||currentRoute == '/robot/done'">
     <div class="container">
       <a class="navbar-brand" routerLink="/home">HAKEIM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">

@@ -124,9 +124,7 @@
 
           <div class="card-body">
             <form [formGroup]="formData">
-
               <div class="row">
-
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="font-weight-bold" >Department</label>
@@ -138,18 +136,17 @@
                     </select>
                   </div>
                 </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="font-weight-bold" >Specialization</label>
-                      <select class="form-control " formControlName="specialization">
-                        <option class="mt-auto"
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="font-weight-bold" >Specialization</label>
+                    <select class="form-control " formControlName="specialization">
+                      <option class="mt-auto"
                                 *ngFor="let specialType of specialName"
                                 [ngValue]="specialType.id">{{specialType.specialName}}
-                        </option>
-                      </select>
-                    </div>
+                      </option>
+                    </select>
                   </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-md-12">

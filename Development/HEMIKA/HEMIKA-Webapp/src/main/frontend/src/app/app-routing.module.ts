@@ -40,7 +40,7 @@ const routes: Routes = [
       {path: 'about', component: AboutComponent},
       {path: 'home/part', component: HomePartComponent},
       {path: 'user/new', component: CreateUserComponent},
-      // {path: 'patient/profile', component: PatientProfileComponent},
+      {path: 'patient/profile', component: PatientProfileComponent},
       {path: 'user/doctor', component: DoctorDetailsComponent},
       {path: 'robot/new', component: CreateRobotComponent},
       {path: 'robot/done', component: CreateRobotDoneComponent},

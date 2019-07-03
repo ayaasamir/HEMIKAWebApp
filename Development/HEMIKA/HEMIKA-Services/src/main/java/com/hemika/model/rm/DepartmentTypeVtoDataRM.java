@@ -11,7 +11,7 @@ public class DepartmentTypeVtoDataRM implements RowMapper<DepartmentVtoData> {
     public DepartmentVtoData mapRow(ResultSet resultSet, int i) throws SQLException {
        DepartmentVtoData DepartType = new DepartmentVtoData();
         DepartType.setId(resultSet.getInt("id"));
-        DepartType.setName(resultSet.getString("name"));
+        DepartType.setDepartName(resultSet.getString("name"));
         return DepartType;
     }
 

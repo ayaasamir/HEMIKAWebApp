@@ -10,7 +10,7 @@ public class SpecializationVtoDataRM implements RowMapper<SpecializationVtoData>
         public SpecializationVtoData mapRow(ResultSet resultSet, int i) throws SQLException {
           SpecializationVtoData specialization = new SpecializationVtoData();
           specialization.setId(resultSet.getInt("id"));
-          specialization.setName(resultSet.getString("specialization_name"));
+          specialization.setSpecialName(resultSet.getString("specialization_name"));
             return specialization;
         }
 
