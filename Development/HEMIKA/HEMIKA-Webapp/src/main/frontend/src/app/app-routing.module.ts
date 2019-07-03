@@ -13,7 +13,7 @@ import {HomePartComponent} from "./modules/home-part/home-part.component";
 import {CreateRobotDoneComponent} from "./modules/creating-users/components/create-robot-done/create-robot-done.component";
 import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
-import {PatientListComponent} from "./modules/doctor-profile/components/doctor-profile/components/patient-list/patient-list.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 import {DoctorProfileComponent} from "./modules/doctor-profile/components/doctor-profile/doctor-profile.component";
 import {PatientsComponent} from "./modules/doctor-profile/components/doctor-profile/components/patients/patients.component";

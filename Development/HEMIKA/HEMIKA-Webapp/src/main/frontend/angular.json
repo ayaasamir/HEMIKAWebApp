@@ -78,9 +78,28 @@
               "src/assets/scss/_functions.scss",
               "src/assets/scss/_media.scss",
               "src/assets/scss/_mixins.scss",
-              "src/assets/scss/style.scss"
+              "src/assets/scss/style.scss",
+
+              "src/assets/loginForm/animate/animate.css",
+              "src/assets/loginForm/animsition/css/animsition.min.css",
+              "src/assets/loginForm/css-hamburgers/hamburgers.min.css",
+              "src/assets/loginForm/daterangepicker/daterangepicker.css",
+              "src/assets/loginForm/perfect-scrollbar/perfect-scrollbar.css",
+              "src/assets/loginForm/select2/select2.min.css",
+              "src/assets/loginForm/main.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/loginForm/jquery/jquery-3.2.1.min.js",
+              "src/assets/loginForm/bootstrap/js/popper.min.js",
+              "src/assets/loginForm/bootstrap/js/tooltip.js",
+              "src/assets/loginForm/bootstrap/js/bootstrap.min.js",
+              "src/assets/loginForm/animsition/js/animsition.min.js",
+              "src/assets/loginForm/countdowntime/countdowntime.js",
+              "src/assets/loginForm/daterangepicker/moment.min.js",
+              "src/assets/loginForm/daterangepicker/daterangepicker.js",
+              "src/assets/loginForm/select2/select2.min.js",
+              "src/assets/loginForm/main.js"
+            ]
           },
           "configurations": {
             "production": {
