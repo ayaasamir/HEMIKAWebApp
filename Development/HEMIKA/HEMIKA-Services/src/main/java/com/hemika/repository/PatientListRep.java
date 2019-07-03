@@ -20,7 +20,7 @@ public class PatientListRep {
 
     public List<patientListVTO> findByName( String name){
 
-       String sql = "SELECT `date`,`status`, concat(first_name,' ',last_name) fullname   FROM mydb.primary_examination_t,  mydb.status, mydb.user_t WHERE (`patient_visit_t_id` = (SELECT MAX(`id`) FROM mydb.patient_visit_t WHERE `patient_t_user_t_national_id` = (SELECT `national_id` FROM mydb.user_t WHERE `first_name` = ?))) and (`first_name` = ?) and (`id`=(SELECT `status_id` FROM mydb.patient_t WHERE `user_t_national_id` = (SELECT `national_id` FROM mydb.user_t WHERE `first_name` = ?)))";
+       String sql = "SELECT `date`,`status`, concat(first_name,' ',last_name)fullname  ,`national_id` FROM mydb.primary_examination_t,  mydb.status, mydb.user_t WHERE (`patient_visit_t_id` = (SELECT MAX(`id`) FROM mydb.patient_visit_t WHERE `patient_t_user_t_national_id` = (SELECT `national_id` FROM mydb.user_t WHERE `first_name` = ?))) and (`first_name` = ?) and (`id`=(SELECT `status_id` FROM mydb.patient_t WHERE `user_t_national_id` = (SELECT `national_id` FROM mydb.user_t WHERE `first_name` = ?)))";
         RowMapper<patientListVTO> patientRM= new patientListVTORM();
         List<patientListVTO> patients=  this.jdbc.query(sql, patientRM, name,name,name);
         return patients;

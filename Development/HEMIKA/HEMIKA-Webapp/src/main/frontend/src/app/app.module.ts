@@ -38,9 +38,12 @@ import {PatientsComponent} from "./modules/doctor-profile/components/doctor-prof
 import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
 
 // import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
+import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
+// import {IndexHomeComponent} from "./modules/home/components/main-home/component/index-home/index-home.component";
+// import {AboutComponent} from "./modules/home/components/main-home/component/about/about.component";
 import {AboutComponent} from "./modules/home/components/about/about.component";
 import {ContactComponent} from "./modules/home/components/contact/contact.component";
 import {ServicesComponent} from "./modules/home/components/services/services.component";
@@ -81,11 +84,13 @@ import {ItProfileComponent} from "./modules/it-profile/it-profile.component";
     PatientListComponent,
     CreateVisitorComponent,
     CreateUserDoneComponent,
-    VisitorProfileComponent,
     AboutComponent,
     ContactComponent,
     ServicesComponent,
     DoctorsComponent,
+    NewsComponent,
+    VisitorProfileComponent,
+
     NewsComponent,
     ItProfileComponent
   ],

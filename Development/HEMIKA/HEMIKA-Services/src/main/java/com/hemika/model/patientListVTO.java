@@ -8,8 +8,18 @@ public class patientListVTO implements Serializable {
     private String startDate;
     private String endDate;
     private String lastCheck;
+    private String nationalId;
 
     public patientListVTO() {
+    }
+
+    public void setNationalId(String nationalId) {
+        this.nationalId = nationalId;
+    }
+
+    public String getNationalId() {
+
+        return nationalId;
     }
 
     public String getPatientName() {

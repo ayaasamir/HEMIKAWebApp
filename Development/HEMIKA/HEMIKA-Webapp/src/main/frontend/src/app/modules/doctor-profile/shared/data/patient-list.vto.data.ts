@@ -4,4 +4,5 @@ export class patientListVTO {
   startDate:string;
   endDate:string;
   lastCheck:string;
+  national_Id:string;
 }

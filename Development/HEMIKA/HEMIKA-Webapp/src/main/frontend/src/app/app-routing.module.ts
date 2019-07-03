@@ -20,6 +20,8 @@ import {PatientsComponent} from "./modules/doctor-profile/components/doctor-prof
 import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
 import {PatientDetailsComponent} from "./modules/patient-profile/components/patient-details/patient-details.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
+// import {IndexHomeComponent} from "./modules/home/components/main-home/component/index-home/index-home.component";
+// import {AboutComponent} from "./modules/home/components/main-home/component/about/about.component";
 import {DoctorsComponent} from "./modules/home/components/doctors/doctors.component";
 import {HomeComponent} from "./modules/home/home.component";
 //import {NewsComponent} from "./modules/home/components/news/news.component";
@@ -33,6 +35,9 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {
     path: '', component: FullLayoutComponent, children: [
+      {path: 'home', component: HomePageComponent},
+      // {path: 'index', component: IndexHomeComponent},
+      {path: 'about', component: AboutComponent},
        {path: 'home', component: HomePageComponent},
        {path: 'doctors', component: DoctorsComponent},
       {path: 'news', component: NewsComponent},
