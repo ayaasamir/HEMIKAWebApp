@@ -10,7 +10,7 @@ import {VisitorService} from "../../shared/visitor-service";
 })
 export class VisitorComponent implements OnInit{
 
-  constructor(private formBuilder : FormBuilder ,private userService :VisitorService) { }
+  constructor(private formBuilder : FormBuilder ,private visitorService :VisitorService) { }
   ngOnInit() {}
   formData : FormGroup = this.formBuilder.group({
     name :null,
@@ -22,7 +22,7 @@ export class VisitorComponent implements OnInit{
     visitorData.name=this.formData.get("name").value;
     visitorData.relation=this.formData.get("relation").value;
     visitorData.id=this.formData.get("id").value;
-    this.userService.add(visitorData);
+    this.visitorService.add(visitorData);
   }
 
   clear():void { this.formData.reset(); }
