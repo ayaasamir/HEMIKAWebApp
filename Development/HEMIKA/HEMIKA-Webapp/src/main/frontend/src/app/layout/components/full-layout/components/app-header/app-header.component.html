@@ -1,4 +1,241 @@
-<!--&lt;!&ndash;<nav class="navbar navbar-default" role="navigation">&ndash;&gt;-->
+<header role="banner">
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-5">
+          <ul class="social list-unstyled">
+            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-7 text-right" *ngIf="currentRoute =='/home/page'||currentRoute =='/doctors'||currentRoute =='/news'||currentRoute =='/services'||currentRoute =='/contact'||currentRoute =='/about'">
+          <p class="mb-0">
+            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
+               [routerLink]="['/login']">  Login  </a>
+            <!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"-->
+            <!--               [routerLink]="['/home']">   Logout  </a>-->
+            <!--&lt;!&ndash;            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"&ndash;&gt;-->
+            <!--               [routerLink]="['/user/new']" > create user</a>-->
+            <!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"-->
+            <!--               [routerLink]="['/robot/new']" > create robot</a>-->
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-6 col-7 text-right" *ngIf="currentRoute =='/doctor'||currentRoute =='/visitor/profile'||currentRoute =='/it'||currentRoute =='/profile'||currentRoute =='/patient/profile'||currentRoute =='/patients'">
+          <p class="mb-0">
+            <!--              <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"-->
+            <!--                 [routerLink]="['/login']">  Login  </a>-->
+            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
+               [routerLink]="['/home']">   Logout  </a>
+            <!--&lt;!&ndash;            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"&ndash;&gt;-->
+            <!--               [routerLink]="['/user/new']" > create user</a>-->
+            <!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"-->
+            <!--               [routerLink]="['/robot/new']" > create robot</a>-->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'">-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' ||currentRoute == '/it' ||currentRoute == '/patient/profile' ||currentRoute == '/user/doctor' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'||currentRoute == '/user/done'||currentRoute == '/home'||currentRoute == '/services'||currentRoute == '/doctors'||currentRoute == '/about'||currentRoute == '/contact'||currentRoute == '/news'||currentRoute == '/visitor'||currentRoute == '/login'||currentRoute == '/robot/done'">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">SMART HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/home">Home</a>
+              <!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/doctors">Doctors</a>
+            </li>
+
+
+            <!--          <li class="nav-item dropdown">-->
+            <!--            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
+            <!--            <div class="dropdown-menu" aria-labelledby="dropdown04">-->
+            <!--              <a class="dropdown-item" href="#">Institute</a>-->
+            <!--              <a class="dropdown-item" href="#">Departments</a>-->
+            <!--              <a class="dropdown-item" href="services.html">Services</a>-->
+            <!--            </div>-->
+            <!--          </li>-->
+            <!--          <li class="nav-item dropdown">-->
+            <!--            <a class="nav-link dropdown-toggle" routerLink="/doctors" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>-->
+            <!--            <div class="dropdown-menu" aria-labelledby="dropdown05">-->
+            <!--              <a class="dropdown-item" routerLink="/doctors">Find Doctors</a>-->
+            <!--              <a class="dropdown-item" href="#">Practitioner</a>-->
+            <!--            </div>-->
+            <!--          </li>-->
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact">Contact</a>
+            </li>
+            <li class="nav-item dropdown" *ngIf="currentRoute == '/it'">
+
+              <a class="nav-link dropdown-toggle" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown05">
+                <a class="dropdown-item" routerLink="/user/new">User</a>
+                <a class="dropdown-item" routerLink="/robot/new">Robot</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '/doctor'">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">SMART HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
+              <a class="nav-link active" routerLink="/home/page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/doctor/patients">My Patients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/doctor/profile">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/patient/list">Search Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="checkRoute('patient')">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">SMART HOSPITAL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/home">Home</a>
+              <!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/patient/profile">My Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="checkRoute('visitor')">
+      <div class="container">
+        <a class="navbar-brand" routerLink="/home">HAKEIM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
+              <a class="nav-link active" routerLink="/home">Home</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/visitor/profile">My Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
+
+
+  <!--<header role="banner">-->
+  <!--  <div class="top-bar">-->
+  <!--    <div class="container">-->
+  <!--      <div class="row">-->
+  <!--        <div class="col-md-6 col-sm-6 col-5">-->
+  <!--          <ul class="social list-unstyled">-->
+  <!--            <li><a href="#"><span class="fa fa-facebook"></span></a></li>-->
+  <!--            <li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
+  <!--            <li><a href="#"><span class="fa fa-instagram"></span></a></li>-->
+  <!--          </ul>-->
+  <!--        </div>-->
+  <!--        <div class="col-md-6 col-sm-6 col-7 text-right">-->
+  <!--          <p class="mb-0">-->
+  <!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">Make an Appointment</a></p>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+  <!--    <div class="container">-->
+  <!--      <a class="navbar-brand" href="index.html">Medi<span>+</span>  </a>-->
+  <!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">-->
+  <!--        <span class="navbar-toggler-icon"></span>-->
+  <!--      </button>-->
+
+  <!--      <div class="collapse navbar-collapse" id="navbarsExample05">-->
+  <!--        <ul class="navbar-nav ml-auto">-->
+  <!--          <li class="nav-item">-->
+  <!--            <a class="nav-link" href="index.html">Home</a>-->
+  <!--          </li>-->
+  <!--          <li class="nav-item dropdown">-->
+  <!--            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
+  <!--            <div class="dropdown-menu" aria-labelledby="dropdown04">-->
+  <!--              <a class="dropdown-item" href="#">Institute</a>-->
+  <!--              <a class="dropdown-item" href="#">Departments</a>-->
+  <!--              <a class="dropdown-item" href="services.html">Services</a>-->
+  <!--            </div>-->
+
+  <!--          </li>-->
+  <!--          <li class="nav-item dropdown">-->
+  <!--            <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>-->
+  <!--            <div class="dropdown-menu" aria-labelledby="dropdown05">-->
+  <!--              <a class="dropdown-item active" href="doctors.html">Find Doctors</a>-->
+  <!--              <a class="dropdown-item" href="#">Practitioner</a>-->
+  <!--            </div>-->
+  <!--          </li>-->
+  <!--          <li class="nav-item">-->
+  <!--            <a class="nav-link" href="news.html">News</a>-->
+  <!--          </li>-->
+  <!--          <li class="nav-item">-->
+  <!--            <a class="nav-link" href="about.html">About</a>-->
+  <!--          </li>-->
+  <!--          <li class="nav-item">-->
+  <!--            <a class="nav-link" href="contact.html">Contact</a>-->
+  <!--          </li>-->
+  <!--        </ul>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </nav>-->
+  <!--</header>-->
+
+
+
+
+
+  <!--&lt;!&ndash;<nav class="navbar navbar-default" role="navigation">&ndash;&gt;-->
 <!--&lt;!&ndash;  <div class="navbar-header">&ndash;&gt;-->
 <!--&lt;!&ndash;    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">&ndash;&gt;-->
 <!--&lt;!&ndash;      <span class="icon-bar"></span>&ndash;&gt;-->
@@ -271,220 +508,5 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
-<header role="banner">
-  <div class="top-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-5">
-          <ul class="social list-unstyled">
-            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-6 col-sm-6 col-7 text-right">
-          <p class="mb-0">
-            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/login']">  Login  </a>
-            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/home']">   Logout  </a>
-            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/user/new']" > create user</a>
-            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment"
-               [routerLink]="['/robot/new']" > create robot</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'">-->
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="currentRoute == '' ||currentRoute == '/patient/profile' ||currentRoute == '/user/doctor' || currentRoute == '/robot/new'|| currentRoute == '/home/page'|| currentRoute == '/home'||currentRoute == '/user/new'||currentRoute == '/user/done'||currentRoute == '/home'||currentRoute == '/services'||currentRoute == '/doctors'||currentRoute == '/about'||currentRoute == '/contact'||currentRoute == '/news'||currentRoute == '/visitor'||currentRoute == '/login'||currentRoute == '/robot/done'">
-    <div class="container">
-      <a class="navbar-brand" routerLink="/home">HAKEIM</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/home">Home</a>
-<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/doctors">Doctors</a>
-          </li>
 
 
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="dropdown04">-->
-<!--              <a class="dropdown-item" href="#">Institute</a>-->
-<!--              <a class="dropdown-item" href="#">Departments</a>-->
-<!--              <a class="dropdown-item" href="services.html">Services</a>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" routerLink="/doctors" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="dropdown05">-->
-<!--              <a class="dropdown-item" routerLink="/doctors">Find Doctors</a>-->
-<!--              <a class="dropdown-item" href="#">Practitioner</a>-->
-<!--            </div>-->
-<!--          </li>-->
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-
-            <a class="nav-link dropdown-toggle" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Create</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown05">>
-              <a class="dropdown-item" routerLink="/user/new">User</a>
-              <a class="dropdown-item" routerLink="/robot/new">Robot</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="checkRoute('doctor')">
-    <div class="container">
-      <a class="navbar-brand" routerLink="/home">HAKEIM</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
-            <a class="nav-link active" routerLink="">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/doctor/patients">My Patients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/doctor/profile">My Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/patient/list">Search Page</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="checkRoute('patient')">
-    <div class="container">
-      <a class="navbar-brand" routerLink="/home">HAKEIM</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="/home">Home</a>
-<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/patient/profile">My Profile</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="checkRoute('visitor')">
-    <div class="container">
-      <a class="navbar-brand" routerLink="/home">HAKEIM</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" [id]="'navbarsExample05'">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-<!--            <a class="nav-link active" routerLink="/home/page">Home</a>-->
-            <a class="nav-link active" routerLink="/home">Home</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/visitor/profile">My Profile</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- END header -->
-
-
-<!--<header role="banner">-->
-<!--  <div class="top-bar">-->
-<!--    <div class="container">-->
-<!--      <div class="row">-->
-<!--        <div class="col-md-6 col-sm-6 col-5">-->
-<!--          <ul class="social list-unstyled">-->
-<!--            <li><a href="#"><span class="fa fa-facebook"></span></a></li>-->
-<!--            <li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
-<!--            <li><a href="#"><span class="fa fa-instagram"></span></a></li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--        <div class="col-md-6 col-sm-6 col-7 text-right">-->
-<!--          <p class="mb-0">-->
-<!--            <a href="#" class="cta-btn" data-toggle="modal" data-target="#modalAppointment">Make an Appointment</a></p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <div class="container">-->
-<!--      <a class="navbar-brand" href="index.html">Medi<span>+</span>  </a>-->
-<!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--      </button>-->
-
-<!--      <div class="collapse navbar-collapse" id="navbarsExample05">-->
-<!--        <ul class="navbar-nav ml-auto">-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="index.html">Home</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="dropdown04">-->
-<!--              <a class="dropdown-item" href="#">Institute</a>-->
-<!--              <a class="dropdown-item" href="#">Departments</a>-->
-<!--              <a class="dropdown-item" href="services.html">Services</a>-->
-<!--            </div>-->
-
-<!--          </li>-->
-<!--          <li class="nav-item dropdown">-->
-<!--            <a class="nav-link dropdown-toggle" href="doctors.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors</a>-->
-<!--            <div class="dropdown-menu" aria-labelledby="dropdown05">-->
-<!--              <a class="dropdown-item active" href="doctors.html">Find Doctors</a>-->
-<!--              <a class="dropdown-item" href="#">Practitioner</a>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="news.html">News</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="about.html">About</a>-->
-<!--          </li>-->
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="contact.html">Contact</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </nav>-->
-<!--</header>-->
