@@ -15,9 +15,9 @@ import {VisitorComponent} from "./modules/visitor/components/new-visitor/visitor
 import {CreateVisitorComponent} from "./modules/visitor/components/create-visitor/create-visitor.component";
 import {PatientListComponent} from "./modules/doctor-profile/components/patient-list/patient-list.component";
 import {CreateUserDoneComponent} from "./modules/creating-users/components/create-user-done/create-user-done.component";
-import {DoctorProfileComponent} from "./modules/doctor-profile/components/doctor-profile/doctor-profile.component";
-import {PatientsComponent} from "./modules/doctor-profile/components/doctor-profile/components/patients/patients.component";
-import {ProfileComponent} from "./modules/doctor-profile/components/doctor-profile/components/profile/profile.component";
+import {DoctorProfileComponent} from "./modules/doctor-profile/doctor-profile.component";
+import {PatientsComponent} from "./modules/doctor-profile/components/patients/patients.component";
+import {ProfileComponent} from "./modules/doctor-profile/components/profile/profile.component";
 import {PatientDetailsComponent} from "./modules/patient-profile/components/patient-details/patient-details.component";
 import {VisitorProfileComponent} from "./modules/visitor/components/visitor-profile/visitor-profile.component";
 // import {IndexHomeComponent} from "./modules/home/components/main-home/component/index-home/index-home.component";
@@ -32,19 +32,19 @@ import {NewsComponent} from "./modules/home/components/news/news.component";
 import {ItProfileComponent} from "./modules/it-profile/it-profile.component";
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: '', pathMatch: 'full', redirectTo: 'home/page'},
   {
     path: '', component: FullLayoutComponent, children: [
-      {path: 'home', component: HomePageComponent},
-      // {path: 'index', component: IndexHomeComponent},
+      {path: 'home', component: HomeComponent},
+      {path: 'home/page', component: HomePageComponent},
+      {path: 'home/part', component: HomePartComponent},
       {path: 'about', component: AboutComponent},
-       {path: 'home', component: HomePageComponent},
-       {path: 'doctors', component: DoctorsComponent},
+      {path: 'doctors', component: DoctorsComponent},
       {path: 'news', component: NewsComponent},
       {path: 'contact', component: ContactComponent},
       {path: 'services', component: ServicesComponent},
       {path: 'about', component: AboutComponent},
-      {path: 'home/part', component: HomePartComponent},
+
       {path: 'user/new', component: CreateUserComponent},
       {path: 'patient/profile', component: PatientProfileComponent},
       {path: 'user/doctor', component: DoctorDetailsComponent},
